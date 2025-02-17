@@ -1,11 +1,12 @@
 import React from 'react'
+import HeroSection from './pages/heroSection/HeroSection'
 
 const App = () => {
   return (
-    <div className='text-3xl '>
-      Hello WRLD
+    <div className='poppins relative bg-[#003566] text-[#FFD60A]'>
+      <HeroSection />
     </div>
   )
 }
 
-export default App
+export default App 
