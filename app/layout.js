@@ -83,7 +83,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-[95%] xl:max-w-[1223px] w-full mx-auto overflow-x-hidden`}
       >
         {children}
       </body>

@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #01151f;
+  --foreground: #EAE2B7;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #01151f;
+    --foreground: #EAE2B7;
   }
 }
 
@@ -18,4 +18,13 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.poppins {
+  font-family: "Poppins", sans-serif;
+}
+.gajraj-one-regular {
+  font-family: "Gajraj One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
