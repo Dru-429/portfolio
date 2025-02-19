@@ -4,7 +4,6 @@ import {
   easeInOut,
   motion,
   useAnimationControls,
-  useInView,
 } from "framer-motion";
 import { easeIn } from "framer-motion/dom";
 import React, { useRef } from "react";
