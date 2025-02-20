@@ -1,25 +1,25 @@
 "use client"
 
-import { motion } from 'framer-motion'
-import React from 'react'
+import { motion, useScroll, useTransform } from 'framer-motion'
+import React, { useRef } from 'react'
+
+
+const images = [
+    "1.jpeg",
+    "2.jpeg",
+    "3.jpeg",
+    "4.jpeg",
+    "5.jpeg",
+    "6.jpeg",
+    "7.jpeg",
+    "8.jpeg",
+    "9.jpeg",
+    "10.jpeg",
+    "11.jpeg",
+    "12.jpeg",
+]
 
 const ParallaxScroll = () => {
-
-    const images = [
-        "1.jpeg",
-        "2.jpeg",
-        "3.jpeg",
-        "4.jpeg",
-        "5.jpeg",
-        "6.jpeg",
-        "7.jpeg",
-        "8.jpeg",
-        "9.jpeg",
-        "10.jpeg",
-        "11.jpeg",
-        "12.jpeg",
-    ]
- 
 
     const Column = ({ setImages, y = 0 }) => {
         return (
@@ -45,6 +45,26 @@ const ParallaxScroll = () => {
             </motion.div>
         )
     }
+
+    const container = useRef(null)
+    const { scrollProgress } = useScroll({
+        target: container,
+        offset: ['start end', 'end start']
+    })
+    const y = useTransform( scrollProgress, [0,1], [0,1000])
+
+    useEffect(() => {
+        // Initialize Lenis
+        const lenis = new Lenis();
+
+        // Use requestAnimationFrame to continuously update the scroll
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+    },[])
 
 
   return (
