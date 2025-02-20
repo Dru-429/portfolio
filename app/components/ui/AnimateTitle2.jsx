@@ -3,7 +3,7 @@
 import { easeIn, motion, useInView } from "framer-motion";
 import React, { useRef } from "react";
 
-const AnimateTitle2 = ({ text, italicIndex }) => {
+const AnimateTitle2 = ({ text, italicIndex, delay }) => {
 
   const ref = useRef(null);
   const isInView = useInView(ref);
@@ -23,7 +23,7 @@ const AnimateTitle2 = ({ text, italicIndex }) => {
                   whileHover={{ fontSize: 60, fontStyle: "normal" }}
                   initial={{ bottom: "-100%" }}
                   animate={{ bottom: "0" }}
-                  transition={{ ease: easeIn, delay: index * 0.09 }}
+                  transition={{ ease: easeIn, delay: index * delay }}
                   key={index}
                 >
                   {item}
