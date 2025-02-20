@@ -1,13 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
 import { delay, easeIn, easeInOut, motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { SiNotion } from "react-icons/si";
 import { BsCursorFill } from "react-icons/bs";
-import Eyes from "./Eyes";
+import Eyes from "./Eyes.jsx";
 
 export const RevealBento = () => {
     return (
-        <div className="bg-[#8EDCF6] mt-10  text-zinc-50 ">
+        <div className="mt-10  text-background ">
             <motion.div
                 initial="initial"
                 animate="animate"
@@ -47,7 +46,7 @@ const Block = ({ className, ...rest }) => {
                 damping: 50,
             }}
             className={twMerge(
-                "col-span-4 rounded-lg border border-zinc-700 bg-zinc-800 p-6",
+                "col-span-4 rounded-lg border border-secondary bg-secondary p-6",
                 className
             )}
             {...rest}
@@ -61,9 +60,9 @@ const HeaderBlock = () => (
         <div className="absolute md:right-4 md:top-[30%] right-[20%] top-[38%]">
             <Eyes />
         </div>
-        <h1 className=" text-lg font-medium leading-tight">
+        <h1 className=" text-2xl font-bold leading-tight text-background">
             Things i can help you with:{" "}
-            <span className="text-zinc-400 text-xs md:text-lg block relative md:-bottom-20 -bottom-24" >
+            <span className="text-text-xs md:text-lg block relative md:-bottom-20 -bottom-24" >
                 Think. Design.
                 Develop. Launch.
             </span>
@@ -77,17 +76,17 @@ const SocialsBlock = () => (
             whileHover={{
                 // rotate: "1.5deg",
                 scale: 1.1,
-                backgroundColor: "#000000",
+                backgroundColor: "#FCBF49",
             }}
             transition={{ duration: 0.2, ease: easeIn }}
-            className="col-span-6 md:col-span-3 bg-zinc-800 text-zinc-100 
+            className="col-span-6 md:col-span-3 bg-accent
         bg-contain 
         bg-no-repeat 
         bg-right 
         hover:bg-[url('https://skfreelancers.com/wp-content/uploads/2021/03/graphicdesign.png')]"
         >
             <div
-                className="text-2xl font-bold z-10 opacity-90 flex flex-col md:flex-row  gap-1 md:justify-start justify-center items-center  "
+                className="text-2xl font-bold z-10 opacity-90 flex flex-col md:flex-row  gap-1 md:justify-start justify-center items-center  text-background "
             >
                 <div>Digital</div>
                 <div>Desgin</div>
@@ -98,10 +97,10 @@ const SocialsBlock = () => (
             whileHover={{
                 // rotate: "-2.5deg",
                 scale: 1.1,
-                backgroundColor: "#0A0A0A",
+                backgroundColor: "#EAE2B7",
             }}
             transition={{ duration: 0.2, ease: easeIn }}
-            className="col-span-6 bg-zinc-800 text-xl md:col-span-3 bg-contain text-zinc-100 bg-no-repeat  bg-right-bottom
+            className="text-background bg-primary col-span-6 text-xl md:col-span-3 bg-contain bg-no-repeat  bg-right-bottom
                        hover:bg-[url('https://gashwatechnologies.com/images/dynamic_web_designing_himachal_shimla.gif')]
             "
         >
@@ -117,10 +116,10 @@ const SocialsBlock = () => (
             whileHover={{
                 // rotate: "-2.5deg",
                 scale: 1.1,
-                backgroundColor: "#0A0A0A",
+                backgroundColor: "#FCBF49",
             }}
             transition={{ duration: 0.2, ease: easeIn }}
-            className="col-span-6 md:col-span-6 bg-zinc-800 text-2xl text-zinc-100 opacity-90 font-semibold bg-contain bg-no-repeat bg-right 
+            className="col-span-6 md:col-span-6 bg-accent text-2xl text-background opacity-90 font-semibold bg-contain bg-no-repeat bg-right 
                        hover:bg-[url('https://www.innovination.com/wp-content/uploads/2021/06/develpoment.gif')]
             "
         >
@@ -172,11 +171,11 @@ const LocationBlock = () => {
             whileHover={{
                 // rotate: "-2.5deg",
                 scale: 1.1,
-                backgroundColor: "#0A0A0A",
+                backgroundColor: "#F77F00",
             }}
             // ref={ref}
 
-            className="col-span-6 flex flex-row md:flex-col items-center gap-4 md:col-span-3 text-zinc-100 "
+            className="col-span-6 flex flex-row md:flex-col items-center gap-4 md:col-span-3 bg-secondary text-background "
         >
             <motion.div
                 className="-rotate-90 text-xs md:text-2xl w-full relative -top-28 hidden md:visible"
@@ -199,10 +198,10 @@ const NotionListBlock = () => (
         whileHover={{
             // rotate: "-2.5deg",
             scale: 1.05,
-            backgroundColor: "#0A0A0A",
+            backgroundColor: "#FCBF49",
         }}
         transition={{ duration: 0.2, ease: easeIn }}
-        className="col-span-12 md:col-span-9 flex items-center bg-zinc-800 text-2xl text-zinc-100 opacity-90 font-semibold bg-contain bg-no-repeat bg-right 
+        className="col-span-12 md:col-span-9 flex items-center bg-text text-2xl text-background opacity-90 font-semibold bg-contain bg-no-repeat bg-right 
         hover:bg-[url('https://lh5.googleusercontent.com/proxy/pPMvV7_tQBcG9EhYe_YKTbjSMpKxtqbmpoP56o_F_0CdfLDdt95ntRwJK9eXhyT6bcCHL0rDCCOrIkFuOsH747KUW9u1lnssvZjF5Y3d')]"
     >
         <p className="mb-3 text-2xl font-semibold flex items-center justify-center w-full gap-2">

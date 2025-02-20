@@ -1,8 +1,8 @@
 "use client"
 
 import React from 'react'
-import useBlobity from "blobity/lib/react/useBlobity";
-import { initialBlobityOptions } from '@/utils/blobity.config.js';
+// import useBlobity from "blobity/lib/react/useBlobity";
+// import { initialBlobityOptions } from '@/utils/blobity.config.js';
 
 import HeroSection from './components/heroSection/HeroSection.jsx'
 import About from './components/about/About.jsx'
@@ -12,7 +12,7 @@ import Services from './components/servi/Services.jsx';
 
 const page = () => {
 
-  const blobity = useBlobity(initialBlobityOptions)
+  // const blobity = useBlobity(initialBlobityOptions)
 
   return (
     <main className='bg-background text-text'>
