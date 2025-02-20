@@ -35,7 +35,7 @@ const AnimateTitle2 = ({ text, italicIndex, delay }) => {
                   className="text-6xl text-primary relative"
                   initial={{ bottom: "-100%" }}
                   animate={{ bottom: "0" }}
-                  transition={{ ease: easeIn, delay: index * 0.09 }}
+                  transition={{ ease: easeIn, delay: index * delay }}
                   key={index}
                 >
                   {item}
