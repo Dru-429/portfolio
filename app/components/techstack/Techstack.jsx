@@ -40,7 +40,7 @@ const TeachStack = () => {
           ["React JS", <IoLogoReact />],
           ["Next JS", <SiNextdotjs  />],
           ["Node JS", <FaNodeJs  />],
-          ["Express JS", <FaJs />],
+          ["Express JS", <FaNodeJs />],
           ["Framer Motion", <SiFramer />],
           ["Context API", <TbApi />],
           ["Mongo DB", <SiMongodb  />],
