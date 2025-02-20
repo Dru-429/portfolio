@@ -8,6 +8,7 @@ import HeroSection from './components/heroSection/HeroSection.jsx'
 import About from './components/about/About.jsx'
 import TeachStack from './components/techstack/Techstack.jsx';
 import Services from './components/servi/Services.jsx';
+import ParallaxScroll from './components/parallaxScroll/ParallaxScroll.jsx';
 
 
 const page = () => {
@@ -20,6 +21,7 @@ const page = () => {
       <About />
       <TeachStack />
       <Services />
+      <ParallaxScroll />
     </main>
   )
 }
