@@ -20,7 +20,7 @@ const About = () => {
 
   return (
     <section id="about">
-      <div className="w-full min-h-screen pt-20 px-2 sm:px-10 flex sm:flex-row flex-col justify-between sm:items-start pb-32 sm:pb-0 mb-15 border-b-[1px] border-zinc-800 relative">
+      <div className="w-full min-h-screen pt-20 px-2 sm:px-10 flex sm:flex-row flex-col justify-between sm:items-start pb-32 sm:pb-0 mb-15 border-b-[1px] border-text relative">
         <>
           <AnimateTitle2 
             text="ABOUT" 
