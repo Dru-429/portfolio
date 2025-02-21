@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import React from 'react'
-import { SocialLinks } from '../components/ClipPathLinks'
+import { SocialLinks } from './ClipContactPath'
 
 const Contact = () => {
 
