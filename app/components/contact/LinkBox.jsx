@@ -87,8 +87,8 @@ const LinkBox = ({ Icon, href, Text, element  }) => {
         className="relative grid h-20 w-full place-content-center sm:h-28 md:h-36"
       >
         <div className="flex flex-col items-center relative">
-          <Icon className="text-xl sm:text-3xl lg:text-4xl" />
-          <div className="text-[#f1f1f1] z-10 relative top-4">
+          <Icon className="text-xl sm:text-lg lg:text-4xl " />
+          <div className="text-background z-10 absolute -bottom-5">
             {Text}
           </div>
         </div>
