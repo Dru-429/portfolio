@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 import { useAnimate } from "framer-motion";
 
@@ -22,7 +24,7 @@ const EXIT_KEYFRAMES = {
   right: [NO_CLIP, BOTTOM_LEFT_CLIP],
 };
 
-const LinkBox = ({ Icon, href, Text, isform, from  }) => {
+const LinkBox = ({ Icon, href, Text, element  }) => {
   const [scope, animate] = useAnimate();
 
   const getNearestSide = (e) => {
@@ -71,35 +73,44 @@ const LinkBox = ({ Icon, href, Text, isform, from  }) => {
     });
   };
 
-  return (
-    <a
-      href={href}
-      target="_blank"
-      onMouseEnter={(e) => {
-        handleMouseEnter(e);
-      }}
-      onMouseLeave={(e) => {
-        handleMouseLeave(e);
-      }}
-      className="relative grid h-20 w-full place-content-center sm:h-28 md:h-36"
-    >
-      <div className="flex flex-col items-center relative">
-        <Icon className="text-xl sm:text-3xl lg:text-4xl" />
-        <div className="text-[#f1f1f1] z-10 relative top-4">
-          {Text}
-        </div>
-      </div>
-      <div
-        ref={scope}
-        style={{
-          clipPath: BOTTOM_RIGHT_CLIP,
+  if (!element){
+    return (
+      <a
+        href={href}
+        target="_blank"
+        onMouseEnter={(e) => {
+          handleMouseEnter(e);
         }}
-        className="absolute inset-0 grid place-content-center bg-zinc-800 text-white"
+        onMouseLeave={(e) => {
+          handleMouseLeave(e);
+        }}
+        className="relative grid h-20 w-full place-content-center sm:h-28 md:h-36"
       >
-        <Icon className="text-xl sm:text-3xl md:text-4xl" />
-      </div>
-    </a>
-  );
+        <div className="flex flex-col items-center relative">
+          <Icon className="text-xl sm:text-3xl lg:text-4xl" />
+          <div className="text-[#f1f1f1] z-10 relative top-4">
+            {Text}
+          </div>
+        </div>
+        <div
+          ref={scope}
+          style={{
+            clipPath: BOTTOM_RIGHT_CLIP,
+          }}
+          className="absolute inset-0 grid place-content-center bg-text text-background"
+        >
+          <Icon className="text-xl sm:text-3xl md:text-4xl" />
+        </div>
+      </a>
+    );
+  }
+  else{
+    return(
+      <>
+        {element}
+      </>
+    )
+  }
 };
 
 export default LinkBox
