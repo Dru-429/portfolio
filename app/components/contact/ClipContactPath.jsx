@@ -19,6 +19,7 @@ import { IoMdMail } from "react-icons/io";
 // import Contra from "../icons/Contra";
 import LinkBox from "./LinkBox";
 import ContactForm from "./ContactForm";
+import Location from "./Location";
 
 export const SocialLinks = () => {
   return (
@@ -65,7 +66,10 @@ const ClipPathLinks = () => {
         </div>
         
         <div className="grid grid-cols-1 place-content-center">
-          <LinkBox  Icon="nn" href="nn" />
+          <LinkBox 
+            element={<Location />
+            }
+          />
         </div>
       </div>
 
