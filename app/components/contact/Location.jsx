@@ -36,6 +36,7 @@ const Location = () => {
         <img
           src="/images/globe.gif"
           alt="working"
+          className="scale-150"
         //   fill
         //   style={{ width: "80%", height: "60%" }}
         />

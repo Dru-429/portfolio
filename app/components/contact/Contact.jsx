@@ -5,7 +5,7 @@ import { SocialLinks } from './ClipContactPath'
 const Contact = () => {
 
   return (
-    <div className='w-full min-h-screen border-[1px] border-t-secondary border-accent rounded-t-3xl mt-0 md:px-10 px-2 py-20' >
+    <div id='contact' className='w-full min-h-screen border-[1px] border-t-secondary border-accent rounded-t-3xl mt-0 md:px-10 px-2 py-20 mb-20' >
         <div className='w-full flex items-center justify-start flex-col'>
             <div className='text-4xl md:text-[5rem] text-primary uppercase mb-10'>
                 <span>ha</span>
