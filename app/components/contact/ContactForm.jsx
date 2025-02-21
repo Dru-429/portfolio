@@ -26,8 +26,8 @@ const ContactForm = () => {
 
   return (
     <motion.div
-      className='text-background px-2 py-4 w-full h-full  relative'
-      whileHover={{ backgroundColor: "#01151f", color: "#F77F00" }}
+      className='text-text px-2 py-4 w-full h-full  relative'
+      whileHover={{ backgroundColor: "#EAE2B7", color: "#01151f" }}
     >
 
       <form onSubmit={handleSubmit} className='relative'>
@@ -37,7 +37,7 @@ const ContactForm = () => {
           <div className='relative'>
             <label htmlFor="name">Name:</label>
             <input
-              className='bg-background outline-none rounded-lg px-2 py-1 ml-2 h-6 text-xs border-[1px] border-zinc-950 focus:border-[#8EDCF6] hover:border-[#8EDCF6] text-[#8EDCF6]  w-80'
+              className='bg-background outline-none rounded-lg px-2 py-3 ml-2 h-6 text-sm border-[1px] border-secondary focus:border-accent hover:border-accent text-text  w-80'
               type="text"
               placeholder='John Dior'
               id="name"
@@ -52,7 +52,7 @@ const ContactForm = () => {
           <div >
             <label htmlFor="email">Email:</label>
             <input
-              className='bg-zinc-700 outline-none rounded-lg px-2 py-1 ml-2  h-6 text-xs border-[1px] border-zinc-950 focus:border-[#8EDCF6] hover:border-[#8EDCF6] text-[#8EDCF6] w-80'
+              className='bg-background outline-none rounded-lg px-2 py-3 ml-2 h-6 text-sm border-[1px] border-secondary focus:border-accent hover:border-accent text-text  w-80'
               type="email"
               id="email"
               placeholder='exaple@gmail.com'
@@ -68,7 +68,7 @@ const ContactForm = () => {
         <div className='flex flex-col mt-5'>
           <label htmlFor="message" className='text-sm'>Message:</label>
           <textarea
-            className='bg-zinc-700 outline-none rounded-lg px-2 py-1 ml-2 h-32 md:h-20 text-xs border-[1px] border-zinc-950 focus:border-[#8EDCF6] hover:border-[#8EDCF6] text-[#8EDCF6]  w-[97%] block'
+            className='outline-none rounded-lg px-2 py-3 ml-2 h-32 md:h-20 text-xs bg-background border-[1px] border-secondary focus:border-accent hover:border-accent text-text w-[97%] block'
             id="message"
             name="message"
             placeholder='Hi Dru...'
@@ -81,12 +81,12 @@ const ContactForm = () => {
         <div className='my-2 md:my-0 relative top-2 md:absolute md:top-0 md:right-7'>  
             <motion.button
               type="submit"
-              className='border-[1px] border-zinc-900 text-[#8EDCF6] bg-[#8EDCF6] px-4 py-1 rounded-xl flex gap-2 items-center justify-center'
+              className='border-[1px] border-background text-background bg-secondary px-4 py-1 rounded-xl flex gap-2 items-center justify-center'
               whileTap={{ scale: 0.9 }}
-              whileHover={{ scale: 1.05, backgroundColor: "#8EDCF6", color: "#14203E", border: "2px" }}
+              whileHover={{ scale: 1.05, backgroundColor: "#F77F00", border: "2px" }}
             >
-              <div className='text-zinc-900 ' >Sent</div>
-              <div className='text-zinc-800'>
+              <div>Sent</div>
+              <div>
                 <IoSend />
               </div>
             </motion.button>
