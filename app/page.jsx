@@ -9,7 +9,7 @@ import About from './components/about/About.jsx'
 import TeachStack from './components/techstack/Techstack.jsx';
 import Services from './components/servi/Services.jsx';
 import ParallaxScroll from './components/parallaxScroll/ParallaxScroll.jsx';
-import Contact from './components/contactjs/Contact.jsx';
+import Contact from './components/contact/Contact.jsx';
 
 
 const page = () => {
