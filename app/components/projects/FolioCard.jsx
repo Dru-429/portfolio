@@ -37,15 +37,28 @@ export default function FolioCard({
           <h2 className="text-2xl font-semibold text-primary">{title}</h2>
           <div className="flex gap-4">
             {gitLink && (
-              <Link href={gitLink} target="_blank" rel="noopener noreferrer">
-                <FaGithub className="text-text text-2xl hover:text-secondary" />
-              </Link>
+              <div
+                className="text-text text-2xl hover:text-secondary hover:scale-110 duration-200"
+              >
+                <Link href={gitLink} target="_blank" rel="noopener noreferrer">
+                  <FaGithub className="text-text text-2xl hover:text-secondary" />
+                </Link>
+              </div>
             )}
 
             {liveLink && (
-              <Link href={liveLink} target="_blank" rel="noopener noreferrer">
-                <FaExternalLinkAlt className="text-text text-2xl hover:text-secondary" />
-              </Link>
+              <motion.div 
+                className="text-text text-2xl hover:text-secondary hover:scale-110 duration-200"
+                whileTap={{scale: 1.0 }}
+              > 
+                <Link 
+                  href={liveLink} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <FaExternalLinkAlt />
+                </Link>
+              </motion.div>
             )}
           </div>
         </div>
@@ -60,6 +73,7 @@ export default function FolioCard({
             // >
             //   {tech}
             // </span>
+
             <TechCapsule 
               index={index}
               item={tech}
