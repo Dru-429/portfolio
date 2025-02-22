@@ -1,12 +1,12 @@
 "use client";
 
 import React from "react";
-import data from "./ProjectData.json";
+import projectData from "./ProjectData.jsx";
 import AnimateTitle2 from "../ui/AnimateTitle2";
 import FolioCard from "./FolioCard";
 
 const Projects = () => {
-  const projectsData = data;
+  const projectsData =  projectData;
   console.log(projectsData);
 
   return (

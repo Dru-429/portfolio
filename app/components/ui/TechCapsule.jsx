@@ -1,3 +1,5 @@
+"use client"
+
 import { easeIn, easeInOut, motion } from "framer-motion";
 import React from "react";
 
@@ -8,7 +10,7 @@ const TechCapsule = ({ item, index }) => {
     <div>
       <motion.div
         key={index}
-        className="sm:text-lg min-w-32 flex justify-between items-center border-[1px] rounded-3xl px-4 py-1 mr-5 border-primary scale-0.5 "
+        className=" text-sm min-w-32 border-[1px] rounded-xl px-4 py-1 mr-5 border-primary scale-0.5 "
         // drag
         // dragConstraints={{
         //   top: -30,
@@ -31,7 +33,7 @@ const TechCapsule = ({ item, index }) => {
         transition={{ ease: easeInOut, duration: 0.2 }}
       >
         <div>
-          <div className="flex items-center gap-2">
+          <div className="flex w-full justify-center items-center gap-2">
             {item[1]}
             {item[0]}
           </div>

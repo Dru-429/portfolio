@@ -16,7 +16,7 @@ export default function FolioCard({
 }) {
   return (
     <motion.div
-      className="bg-[#fde1a922] w-full sm:w-[90%] rounded-2xl overflow-hidden shadow-lg flex flex-col justify-between items-center gap-10 sm:flex-row p-5 mb-5 hover:shadow-[5px_5px_10px_rgba(233, 196, 106, 0.6)] transition-shadow duration-200"
+      className="bg-[#fde1a922] w-full sm:w-[90%] rounded-2xl overflow-hidden shadow-lg flex flex-col justify-between items-center gap-10 sm:flex-row p-5 mb-5 hover:shadow-[5px_5px_10px_rgba(0, 0, 0, 0.2)] transition-shadow duration-200"
       whileHover={{ scale: 1.005 }}
       transition={{ duration: 0.3 }}
     >
