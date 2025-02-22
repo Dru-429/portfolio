@@ -1,6 +1,6 @@
 import React from "react";
 
-const TechhTab = ({ item, index }) => {
+const TechCapsule = ({ item, index }) => {
   return (
     <div>
       <motion.div
@@ -39,4 +39,4 @@ const TechhTab = ({ item, index }) => {
   );
 };
 
-export default TechhTab;
+export default TechCapsule;
