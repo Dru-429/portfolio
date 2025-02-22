@@ -26,7 +26,9 @@ const TeachStack = () => {
   return (
     <section id="techstack">
       <div className="w-full min-h-screen py-20 sm:pb-10 sm:px-10 px-2 flex flex-col sm:flex-row justify-between items-start relative">
+        
         <AnimateTitle2 text="Tech Stack" delay={0.05} />
+
         <div className="flex gap-5 relative top-2 flex-wrap flex-row sm:w-[70%] justify-center sm:justify-start">
           {[
             ["HTML", <IoLogoHtml5 />],
