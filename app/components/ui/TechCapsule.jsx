@@ -1,11 +1,14 @@
+import { easeIn, easeInOut, motion } from "framer-motion";
 import React from "react";
 
 const TechCapsule = ({ item, index }) => {
+
+  
   return (
     <div>
       <motion.div
         key={index}
-        className="sm:text-lg min-w-48 flex justify-between items-center border-[1px] rounded-3xl px-4 py-1 mr-10 border-primary cursor-grab scale-0.5 "
+        className="sm:text-lg min-w-32 flex justify-between items-center border-[1px] rounded-3xl px-4 py-1 mr-5 border-primary scale-0.5 "
         // drag
         // dragConstraints={{
         //   top: -30,
@@ -33,7 +36,7 @@ const TechCapsule = ({ item, index }) => {
             {item[0]}
           </div>
         </div>
-        <motion.div className="rounded-full w-3 bg-accent h-3 ml-2"></motion.div>
+        {/* <motion.div className="rounded-full w-3 bg-accent h-3 ml-2"></motion.div> */}
       </motion.div>
     </div>
   );

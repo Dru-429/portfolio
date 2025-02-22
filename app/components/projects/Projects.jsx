@@ -15,17 +15,19 @@ const Projects = () => {
         <AnimateTitle2 text="PROJECTS" italicIndex={2} delay={0.08} />
       </div>
 
-      {projectsData.map((work, index) => (
-        <FolioCard
-          key={index}
-          img={work.img}
-          title={work.title}
-          gitLink={work.gitLink}
-          liveLink={work.liveLink}
-          about={work.about}
-          stack={work.stack}
-        />
-      ))}
+      <div className="flex flex-col items-center justify-center">
+        {projectsData.map((work, index) => (
+          <FolioCard
+            key={index}
+            img={work.img}
+            title={work.title}
+            gitLink={work.gitLink}
+            liveLink={work.liveLink}
+            about={work.about}
+            stack={work.stack}
+          />
+        ))}
+      </div>
     </section>
   );
 };
