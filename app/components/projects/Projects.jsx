@@ -19,6 +19,7 @@ const Projects = () => {
         {projectsData.map((work, index) => (
           <FolioCard
             key={index}
+            index={index}
             img={work.img}
             title={work.title}
             gitLink={work.gitLink}

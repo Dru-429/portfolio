@@ -5,8 +5,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa"
 import TechCapsule from "../ui/TechCapsule";
+import AnimateTitle3 from "../ui/AnimateTitle3";
 
 export default function FolioCard({
+  index,
   title,
   img,
   gitLink,
@@ -35,6 +37,13 @@ export default function FolioCard({
         {/* //links */}
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-2xl font-semibold text-primary">{title}</h2>
+
+          <AnimateTitle3 
+            key={index}
+            title={title} 
+            sno={index}
+          />
+
           <div className="flex gap-4">
             {gitLink && (
               <div
