@@ -113,39 +113,39 @@ const AnimateTitle3 = ({sno, title, child}) => {
           if (index == 0 || index % 2 == 0) {
             return (
               <span
-                className="text-2xl relative h-[32px] flex flex-col overflow-y-hidden pl-1"
+                className="text-2xl font-semibold text-primary relative h-[32px] flex flex-col overflow-y-hidden pl-1"
                 key={index}
               >
-                <motion.div
-                  className="relative "
-                  initial={{ top: 0, opacity: 1 }}
-                  animate={controlTop}
-                  transition={{ duration: 0.5, ease: easeIn }}
-                >
-                  {item}
-                </motion.div>
-                <motion.div
-                  className="relative "
-                  initial={{ top: 0, opacity: 1 }}
-                  animate={controlTop}
-                  transition={{ duration: 0.5, ease: easeIn }}
-                >
-                  {item}
-                </motion.div>
-                <motion.div
-                  className="relative "
-                  initial={{ top: 0, opacity: 1 }}
-                  animate={controlTop}
-                  transition={{ duration: 0.5, ease: easeIn }}
-                >
-                  {item}
-                </motion.div>
+                    <motion.div
+                    className="relative "
+                    initial={{ top: 0, opacity: 1 }}
+                    animate={controlTop}
+                    transition={{ duration: 0.5, ease: easeIn }}
+                    >
+                    {item}
+                    </motion.div>
+                    <motion.div
+                    className="relative "
+                    initial={{ top: 0, opacity: 1 }}
+                    animate={controlTop}
+                    transition={{ duration: 0.5, ease: easeIn }}
+                    >
+                    {item}
+                    </motion.div>
+                    <motion.div
+                    className="relative "
+                    initial={{ top: 0, opacity: 1 }}
+                    animate={controlTop}
+                    transition={{ duration: 0.5, ease: easeIn }}
+                    >
+                    {item}
+                    </motion.div>
               </span>
             );
           } else {
             return (
               <span
-                className="text-2xl relative h-[32px] flex flex-col overflow-y-hidden pl-1"
+                className="text-2xl font-semibold text-primary relative h-[32px] flex flex-col overflow-y-hidden pl-1"
                 key={index}
               >
                 <motion.div
