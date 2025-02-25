@@ -7,7 +7,7 @@ const AnimateTitle3 = ({sno, title, child}) => {
     const controlBottom = useAnimationControls()
     // const controlClicked = useAnimationControls()
     const controlLine = useAnimationControls()
-    const Sno = "0" + `${sno}`
+    const Sno = "0" + ` ${sno}`
 
     const handelEnter = () => { 
         controlTop.start({
