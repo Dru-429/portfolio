@@ -24,7 +24,7 @@ const page = () => {
       <TeachStack />
       <Projects />
       <Services />
-      {/* <ParallaxScroll /> */}
+      <ParallaxScroll />
       <Contact />
     </main>
   )

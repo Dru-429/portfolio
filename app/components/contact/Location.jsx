@@ -10,7 +10,7 @@ const Location = () => {
   useEffect(() => {
     const updateTime = () => {
       const now = moment().tz("Asia/Kolkata"); // Get time in IST
-      setCurrentTime(now.format("h:mm:ss A")); // Format the time
+      setCurrentTime(now.format("h:mm A")); // Format the time
     };
 
     updateTime(); // Initial time update
@@ -29,7 +29,7 @@ const Location = () => {
         //   fill
         //   style={{ width: "80%", height: "60%" }}
         />
-        <p className="pt-4">{currentTime}</p>
+        <p className="pt-4">{currentTime} IST</p>
       </div>
 
       <div className="flex flex-col items-center justify-center" >
