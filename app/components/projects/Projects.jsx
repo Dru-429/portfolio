@@ -6,14 +6,19 @@ import AnimateTitle2 from "../ui/AnimateTitle2";
 import FolioCard from "./FolioCard";
 
 const Projects = () => {
-  const projectsData =  projectData;
+  const projectsData = projectData;
   console.log(projectsData);
 
   return (
-    <section id="projects">
-      <div>
-        <AnimateTitle2 text="PROJECTS" italicIndex={2} delay={0.08} />
-      </div>
+    <section id="projects" className="relative mx-15 my-20 border-t-[1px] border-text">
+
+    <div className="my-20">
+      <AnimateTitle2 
+        text="PROJECTS" 
+        italicIndex={2} 
+        delay={0.06} 
+      />
+    </div>
 
       <div className="flex flex-col items-center justify-center">
         {projectsData.map((work, index) => (
