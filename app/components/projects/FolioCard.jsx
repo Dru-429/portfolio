@@ -17,7 +17,13 @@ export default function FolioCard({
   stack,
 }) {
   return (
-    <motion.div
+    
+    <AnimateTitle3 
+    key={index}
+    title={title} 
+    sno={index}
+    child={
+      <motion.div
       className="bg-[#fde1a922] w-full sm:w-[90%] rounded-2xl overflow-hidden shadow-lg flex flex-col justify-between items-center gap-10 sm:flex-row p-5 mb-5 hover:shadow-[5px_5px_10px_rgba(0, 0, 0, 0.2)] transition-shadow duration-200"
       whileHover={{ scale: 1.005 }}
       transition={{ duration: 0.3 }}
@@ -38,11 +44,6 @@ export default function FolioCard({
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-2xl font-semibold text-primary">{title}</h2>
 
-          <AnimateTitle3 
-            key={index}
-            title={title} 
-            sno={index}
-          />
 
           <div className="flex gap-4">
             {gitLink && (
@@ -90,6 +91,8 @@ export default function FolioCard({
           ))}
         </div>
       </div>
-    </motion.div>
+      </motion.div>
+    }
+    />
   );
 }
