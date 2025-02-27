@@ -23,13 +23,14 @@ export default function FolioCard({
       sno={index}
       child={
         <motion.div
-          className="bg-[#fde1a922] rounded-t-2xl overflow-hidden shadow-lg flex flex-col justify-between items-center gap-10 sm:flex-row p-5 mb-5 hover:shadow-[5px_5px_10px_rgba(0, 0, 0, 0.2)] transition-shadow duration-200"
+          className="bg-[#fde1a922] rounded-t-2xl overflow-hidden shadow-lg flex flex-col-reverse justify-between items-center gap-10 sm:flex-row p-5 mb-5 hover:shadow-[5px_5px_10px_rgba(0, 0, 0, 0.2)] transition-shadow duration-200"
           whileHover={{ scale: 1.005 }}
           transition={{ duration: 0.3 }}
         >
           <div className="p-6">
             {/* //links */}
-            <div className="flex justify-end items-end mb-4">
+            <div className="flex justify-between items-center sm:justify-end sm:items-end mb-4">
+
               <h2 className="text-2xl font-semibold text-primary sm:hidden ">{title}</h2>
               <div className="flex gap-4">
                 {gitLink && (
