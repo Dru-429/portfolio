@@ -18,7 +18,7 @@ const page = () => {
   // const blobity = useBlobity(initialBlobityOptions)
 
   return (
-    <main className='bg-background text-text'>
+    <main className='bg-background text-text relative'>
       <HeroSection />
       <About />
       <TeachStack />
