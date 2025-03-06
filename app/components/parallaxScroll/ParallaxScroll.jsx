@@ -62,7 +62,7 @@ const ParallaxScroll = () => {
     <div className="my-20 ">
       <div
         ref={container}
-        className="h-[175vh] bg-zinc-800 flex gap-[2vw] box-border p-4 overflow-hidden first:top-[-45%]"
+        className="h-[175vh] bg-zinc-800 flex gap-[2vw] box-border p-4 overflow-hidden "
       >
         <Column images={[images[0], images[1], images[2]]} y={y1} />
         <Column images={[images[3], images[4], images[5]]} y={y2}/>
@@ -75,7 +75,7 @@ const ParallaxScroll = () => {
 
 const Column = ({ images, y }) => {
   return (
-    <motion.div className={`w-1/4 h-full flex flex-col gap-2 relative`} style={{ y }}>
+    <motion.div className={`w-1/4 h-full flex flex-col gap-2 relative top-[-45%]`} style={{ y }}>
       {images.map((src, index) => {
         return (
           <div key={index} className="w-full h-full relative ">
