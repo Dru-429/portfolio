@@ -29,7 +29,7 @@ const ParallaxScroll = () => {
     target: container,
     offset: ["start end", "end start"],
   });
-  const { height } = useDimension()
+  const { height } = useDimension();
 
   // useEffect(() => {
   //   const unsubscribe = scrollYProgress.onChange((latest) => {
@@ -39,11 +39,10 @@ const ParallaxScroll = () => {
   //   return () => unsubscribe(); // Cleanup the listener when the component unmounts
   // }, [scrollYProgress]);
 
-  const y1 = useTransform(scrollYProgress, [0, 1], [0, height * 2])
-  const y2 = useTransform(scrollYProgress, [0, 1], [0, height * 3.3])
-  const y3 = useTransform(scrollYProgress, [0, 1], [0, height * 1.25])
-  const y4 = useTransform(scrollYProgress, [0, 1], [0, height * 3.3])
-
+  const y1 = useTransform(scrollYProgress, [0, 1], [0, height * 2]);
+  const y2 = useTransform(scrollYProgress, [0, 1], [0, height * 3.3]);
+  const y3 = useTransform(scrollYProgress, [0, 1], [0, height * 1.25]);
+  const y4 = useTransform(scrollYProgress, [0, 1], [0, height * 3.3]);
 
   useEffect(() => {
     // Initialize Lenis
@@ -64,18 +63,25 @@ const ParallaxScroll = () => {
         ref={container}
         className="h-[175vh] bg-zinc-800 flex gap-[2vw] box-border p-4 overflow-hidden "
       >
-        <Column images={[images[0], images[1], images[2]]} y={y1} />
-        <Column images={[images[3], images[4], images[5]]} y={y2}/>
-        <Column images={[images[6], images[7], images[8]]}  y={y3} />
-        <Column images={[images[9], images[10], images[11]]} y={y4} />
+        <Column images={[images[0], images[1], images[2]]} y={y1} top="-45%" />
+        <Column images={[images[3], images[4], images[5]]} y={y2} top="-95%" />
+        <Column images={[images[6], images[7], images[8]]} y={y3} top="-45%" />
+        <Column
+          images={[images[9], images[10], images[11]]}
+          y={y4}
+          top={"-95%"}
+        />
       </div>
     </div>
   );
 };
 
-const Column = ({ images, y }) => {
+const Column = ({ images, y, top }) => {
   return (
-    <motion.div className={`w-1/4 h-full flex flex-col gap-2 relative top-[-45%]`} style={{ y }}>
+    <motion.div
+      className={`w-1/4 h-full flex flex-col gap-2 relative`}
+      style={{ y, top }}
+    >
       {images.map((src, index) => {
         return (
           <div key={index} className="w-full h-full relative ">
