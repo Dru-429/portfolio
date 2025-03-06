@@ -23,7 +23,7 @@ export default function FolioCard({
       sno={index}
       child={
         <motion.div
-          className="bg-[#fde1a922] rounded-t-2xl overflow-hidden shadow-lg flex flex-col-reverse justify-between items-center gap-10 sm:flex-row p-5 mb-5 hover:shadow-[5px_5px_10px_rgba(0, 0, 0, 0.2)] transition-shadow duration-200"
+          className="bg-[#fde1a922] rounded-t-2xl overflow-hidden shadow-lg flex flex-col-reverse justify-between items-center gap-10 md:flex-row p-5 mb-5 hover:shadow-[5px_5px_10px_rgba(0, 0, 0, 0.2)] transition-shadow duration-200"
           whileHover={{ scale: 1.005 }}
           transition={{ duration: 0.3 }}
         >
