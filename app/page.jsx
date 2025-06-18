@@ -13,7 +13,7 @@ import Contact from './components/contact/Contact.jsx';
 import Projects from './components/projects/Projects.jsx';
 
 
-const page = () => {
+const page = () => {    
 
   // const blobity = useBlobity(initialBlobityOptions)
 
