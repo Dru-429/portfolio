@@ -3,6 +3,7 @@
 import { easeIn, motion } from "framer-motion";
 import Link from "next/link";
 import React from "react";
+import { ModeToggle } from "../ModeToggle";
 
 const Header = () => {
   return (
@@ -50,6 +51,7 @@ const Header = () => {
           Contact
         </a>
       </div>
+        <ModeToggle />
     </div>
   );
 };
