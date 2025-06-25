@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Header from "./Header.jsx";
 import { easeIn, motion } from "framer-motion";
 import AnimateTitle from "../ui/AnimateTitle.jsx";
 import Link from "next/link.js";
@@ -10,8 +9,6 @@ const HeroSection = () => {
   return (
     <section id="home">
       <div className="w-100% min-h-screen relative">
-        <Header />
-
         <div className="mt-40 mb-52 sm:mb-0 mx-2 sm:mx-10 sm:w-1/2">
           <div className="sm:flex justify-between items-start leading-none tracking-tighter relative">
 

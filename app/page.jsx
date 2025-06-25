@@ -11,6 +11,7 @@ import Services from './components/servi/Services.jsx';
 import ParallaxScroll from './components/parallaxScroll/ParallaxScroll.jsx';
 import Contact from './components/contact/Contact.jsx';
 import Projects from './components/projects/Projects.jsx';
+import Navbar from './components/heroSection/Navbar.jsx';
 
 
 const page = () => {    
@@ -19,6 +20,7 @@ const page = () => {
 
   return (
     <main className='bg-background text-text relative'>
+      <Navbar />
       <HeroSection />
       <About />
       <TeachStack />

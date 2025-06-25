@@ -5,7 +5,7 @@ import Link from "next/link";
 import React from "react";
 import { ModeToggle } from "./ModeToggle";
 
-const Header = () => {
+const Navbar = () => {
   return (
     <div className="flex items-center justify-between py-1 px-1 sm:px-7 py-1md:py-2 box-border sticky backdrop-blur-md bg-accent/10 rounded-3xl p-8 border border-accent/20 shadow-2xl top-2 md:top-4 z-50">
       {/*Left Logo and Name Section */}
@@ -58,4 +58,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Navbar;
