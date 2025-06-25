@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <div className="flex items-center justify-between py-1 px-1 sm:px-7 py-1md:py-2 box-border sticky backdrop-blur-md bg-accent/10 rounded-3xl p-8 border border-accent/20 shadow-2xl top-2 md:top-4 z-50">
       {/*Left Logo and Name Section */}
-      <div className="flex items-center justify-between md:w-[60%] ">
+      <div className="flex items-center justify-between md:w-[60%] w-1/2">
         <div>
           <span className="text-accent sm:text-3xl text-2xl leading-none italic sm:px-2 px-2 sm:pr-2">
             dru
@@ -45,11 +45,11 @@ const Header = () => {
       </div>
 
       {/*Right-Mode Toggle and Contact Section */}
-      <div className="absolute hover:scale-95 right-10 flex items-center gap-2 ">
+      <div className=" flex items-center gap-2 pr-2 ">
         <ModeToggle />
         <a
           href="#contact"
-          className="text-background bg-accent  px-4 py-2 rounded-2xl"
+          className="bg-accent/90 text-accent-foreground px-4 py-2 rounded-2xl box-border border border-accent/20 shadow-lg hover:bg-primary hover:text-primary-foreground transition-all duration-200 text-sm font-semibold tracking-tighter hover:scale-95"
         >
           Contact
         </a>
