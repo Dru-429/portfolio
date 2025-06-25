@@ -3,6 +3,7 @@
 import * as React from "react"
 import { Moon, Sun, Monitor, Palette } from "lucide-react"
 import { useTheme } from "next-themes"
+import { motion } from "framer-motion"
 
 export function ModeToggle() {
   const { theme, setTheme } = useTheme()
@@ -69,7 +70,13 @@ export function ModeToggle() {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 z-50 mt-2 w-56 backdrop-blur-xl bg-secondary/10 border border-white/20 rounded-2xl shadow-2xl shadow-black/20 overflow-hidden">
+        <motion.div 
+          className="absolute right-0 z-50 mt-2 w-56 backdrop-blur-xl bg-secondary/10 border border-white/20 rounded-2xl shadow-2xl shadow-black/20 overflow-hidden"
+          initial={{ opacity: 0, scale: 0,}}
+          animate={{ opacity: 1, scale: 1, }}
+          exit={{ opacity: 0, scale: 0, }} 
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+        >
           {/* Header */}
           <div className="px-4 py-3 border-b border-white/10 flex items-center gap-2">
             <Palette className="w-4 h-4 text-foreground/80" />
@@ -138,7 +145,7 @@ export function ModeToggle() {
             })}
           </div>
 
-        </div>
+        </motion.div>
       )}
     </div>
   )
