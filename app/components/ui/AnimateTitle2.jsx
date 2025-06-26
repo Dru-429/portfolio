@@ -32,7 +32,7 @@ const AnimateTitle2 = ({ text, italicIndex, delay }) => {
             } else {
               return (
                 <motion.span
-                  className="text-6xl text-primary relative"
+                  className="text-6xl text-secondary relative"
                   initial={{ bottom: "-100%" }}
                   animate={{ bottom: "0" }}
                   transition={{ ease: easeIn, delay: index * delay }}
