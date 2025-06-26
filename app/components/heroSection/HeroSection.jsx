@@ -9,7 +9,7 @@ const HeroSection = () => {
   return (
     <section id="home">
       <div className="w-100% min-h-screen relative">
-        <div className="mt-[30vh] mb-52 sm:mb-0 mx-2 sm:mx-10 sm:w-1/2">
+        <div className="mt-[30vh] mb-28 md:mb-0 mx-2 md:mx-10 md:w-1/2 md:text-left">
           <div className="sm:flex justify-between items-start leading-none tracking-tighter relative">
             <motion.span className="text-lg px-1 relative top-3 text-foreground right-4 border-bottom-[1px] border-foreground">
               Dhruv Sahoo
