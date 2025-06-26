@@ -117,13 +117,13 @@ const TechStack = () => {
                 <motion.div
                   key={index}
                   variants={itemVariants}
-                  className="group relative overflow-hidden backdrop-blur-md bg-secodary/10 hover:bg-secondary/20 border border-secondary/20 hover:border-secondary/30 rounded-2xl px-6 py-3 cursor-grab active:cursor-grabbing transition-all duration-300 min-w-[180px]"
+                  className="group relative overflow-hidden backdrop-blur-md bg-secondary/20 hover:bg-secondary/30 border border-secondary/30 hover:border-secondary/40 rounded-2xl px-6 py-3 cursor-grab active:cursor-grabbing transition-all duration-300 min-w-[180px] md:mb-2"
                   drag
                   dragConstraints={{ top: 0, bottom: 0, left: 0, right: 0 }}
                   dragElastic={0.1}
                   dragTransition={{
-                    bounceStiffness: 600,
-                    bounceDamping: 20,
+                    bounceStiffness: 400,
+                    bounceDamping: 10,
                   }}
                   whileHover={{
                     scale: 1.05,
@@ -140,7 +140,7 @@ const TechStack = () => {
 
                   {/* Shine Effect */}
                   <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12"
+                    className="absolute inset-0 bg-gradient-to-r from-transparent via-secondary/20 to-transparent -skew-x-12"
                     initial={{ x: "-100%" }}
                     whileHover={{ x: "200%" }}
                     transition={{ duration: 0.8, ease: "easeInOut" }}
@@ -181,7 +181,7 @@ const TechStack = () => {
                   <motion.div
                     key={index}
                     variants={itemVariants}
-                    className="group relative overflow-hidden backdrop-blur-md bg-white/10 hover:bg-white/20 border border-white/20 hover:border-white/30 rounded-xl px-4 py-3 transition-all duration-300"
+                    className="group relative overflow-hidden backdrop-blur-md bg-secondary/20 hover:bg-secondary/30 border border-secondary/30 hover:border-secondary/40 rounded-xl px-4 py-3 transition-all duration-300"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
@@ -218,7 +218,7 @@ const TechStack = () => {
 
               {/* Mobile Summary Stats */}
               <motion.div
-                className="mt-8 backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl p-4"
+                className="mt-8 backdrop-blur-md bg-secondary/20 border border-secondary/30 rounded-2xl p-4"
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                 transition={{ delay: 1.5, duration: 0.8 }}
