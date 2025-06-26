@@ -62,7 +62,7 @@ export function ModeToggle() {
           </span>
 
           <div
-            className={`w-2 h-2 border-r-2 border-b-2 border-white/60 transform transition-transform duration-300 ${isOpen ? "-rotate-45 translate-y-0.5" : "rotate-45 -translate-y-0.5"}`}
+            className={`w-2 h-2 border-r-2 border-b-2 border-foreground transform transition-transform duration-300 ${isOpen ? "-rotate-45 translate-y-0.5" : "rotate-45 -translate-y-0.5"}`}
           />
         </div>
 
