@@ -34,20 +34,20 @@ export default function FolioCard({
               <h2 className="text-2xl font-semibold text-primary sm:hidden ">{title}</h2>
               <div className="flex gap-4">
                 {gitLink && (
-                  <div className="text-text text-2xl hover:text-secondary hover:scale-110 duration-200">
+                  <div className="text-foreground text-2xl hover:text-secondary hover:scale-110 duration-200">
                     <Link
                       href={gitLink}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <FaGithub className="text-text text-2xl hover:text-secondary" />
+                      <FaGithub className="text-foreground text-2xl hover:text-secondary" />
                     </Link>
                   </div>
                 )}
 
                 {liveLink && (
                   <motion.div
-                    className="text-text text-2xl hover:text-secondary hover:scale-110 duration-200"
+                    className="text-foreground text-2xl hover:text-secondary hover:scale-110 duration-200"
                     whileTap={{ scale: 1.0 }}
                   >
                     <Link
@@ -62,7 +62,7 @@ export default function FolioCard({
               </div>
             </div>
 
-            <p className="text-text mb-4">{about}</p>
+            <p className="text-foreground mb-4">{about}</p>
 
             <div className="flex flex-wrap gap-2">
               {stack.map((tech, index) => (

@@ -26,7 +26,7 @@ const ContactForm = () => {
 
   return (
     <motion.div
-      className='text-text px-2 py-4 w-full h-full  relative'
+      className='text-foreground px-2 py-4 w-full h-full  relative'
       whileHover={{ backgroundColor: "#EAE2B7", color: "#01151f" }}
     >
 
@@ -37,7 +37,7 @@ const ContactForm = () => {
           <div className='relative'>
             <label htmlFor="name">Name:</label>
             <input
-              className='bg-background outline-none rounded-lg px-2 py-3 ml-2 h-6 text-sm border-[1px] border-secondary focus:border-accent hover:border-accent text-text  w-80'
+              className='bg-background outline-none rounded-lg px-2 py-3 ml-2 h-6 text-sm border-[1px] border-secondary focus:border-accent hover:border-accent text-foreground  w-80'
               type="text"
               placeholder='John Dior'
               id="name"
@@ -52,7 +52,7 @@ const ContactForm = () => {
           <div >
             <label htmlFor="email">Email:</label>
             <input
-              className='bg-background outline-none rounded-lg px-2 py-3 ml-2 h-6 text-sm border-[1px] border-secondary focus:border-accent hover:border-accent text-text  w-80'
+              className='bg-background outline-none rounded-lg px-2 py-3 ml-2 h-6 text-sm border-[1px] border-secondary focus:border-accent hover:border-accent text-foreground  w-80'
               type="email"
               id="email"
               placeholder='exaple@gmail.com'
@@ -68,7 +68,7 @@ const ContactForm = () => {
         <div className='flex flex-col mt-5'>
           <label htmlFor="message" className='text-sm'>Message:</label>
           <textarea
-            className='outline-none rounded-lg px-2 py-3 ml-2 h-32 md:h-20 text-xs bg-background border-[1px] border-secondary focus:border-accent hover:border-accent text-text w-[97%] block'
+            className='outline-none rounded-lg px-2 py-3 ml-2 h-32 md:h-20 text-xs bg-background border-[1px] border-secondary focus:border-accent hover:border-accent text-foreground w-[97%] block'
             id="message"
             name="message"
             placeholder='Hi Dru...'

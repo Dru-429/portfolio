@@ -62,7 +62,7 @@ const HeaderBlock = () => (
         </div>
         <h1 className=" text-2xl font-bold leading-tight text-background">
             Things i can help you with:{" "}
-            <span className="text-text-xs md:text-lg block relative md:-bottom-20 -bottom-24" >
+            <span className="text-foreground-xs md:text-lg block relative md:-bottom-20 -bottom-24" >
                 Think. Design.
                 Develop. Launch.
             </span>
