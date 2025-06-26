@@ -40,7 +40,7 @@ export function ModeToggle() {
     <div className="relative inline-block text-left">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="group relative overflow-hidden backdrop-blur-md bg-primary/10 hover:bg-primary/20 border border-white/20 hover:border-secondary/20 rounded-2xl px-4 py-2 h-auto min-w-[100px] transition-all duration-500 hover:scale-105 hover:shadow-md hover:shadow-background/10"
+        className="group relative overflow-hidden backdrop-blur-md bg-primary/10 hover:bg-primary/20 border border-white/20 hover:border-secondary/20 rounded-2xl px-4 py-2 h-auto md:min-w-[100px] transition-all duration-500 hover:scale-105 hover:shadow-md hover:shadow-background/10"
       >
         <div className="absolute inset-0 bg-gradient-to-r from-primary-500/20 via-backgorund-500/20 to-accent-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
