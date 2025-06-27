@@ -160,8 +160,8 @@ export default function FolioCard({ index, title, img, gitLink, liveLink, about,
                       transition={{ delay: index * 0.2 + 0.8 }}
                     >
                       <Link href={gitLink} target="_blank" rel="noopener noreferrer">
-                        <div className="p-3 rounded-full backdrop-blur-md bg-secondary/10 hover:bg-secondary/20 border border-secondary/20 hover:border-secondary/30 transition-all duration-300">
-                          <FaGithub className="text-xl text-foreground/80 group-hover/icon:text-accent transition-colors duration-200" />
+                        <div className="p-3 rounded-full backdrop-blur-md bg-secondary/10 hover:bg-secondary border border-secondary/20 hover:border-secondary/30 transition-all duration-300">
+                          <FaGithub className="text-xl text-foreground/80 group-hover/icon:text-accent hover:text-primary transition-colors duration-200" />
                         </div>
                       </Link>
                       <motion.div
@@ -182,7 +182,7 @@ export default function FolioCard({ index, title, img, gitLink, liveLink, about,
                       transition={{ delay: index * 0.2 + 0.9 }}
                     >
                       <Link href={liveLink} target="_blank" rel="noopener noreferrer">
-                        <div className="p-3 rounded-full backdrop-blur-md bg-secondary/10 hover:bg-secondary/20 border border-secondary/20 hover:border-secondary/30 transition-all duration-300">
+                        <div className="p-3 rounded-full backdrop-blur-md bg-secondary/10 hover:backdrop-none hover:bg-secondary border border-secondary/20 hover:border-secondary/30 transition-all duration-300">
                           <FaExternalLinkAlt className="text-xl text-foreground/80 group-hover/icon:text-accent transition-colors duration-200" />
                         </div>
                       </Link>
