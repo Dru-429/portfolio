@@ -68,7 +68,7 @@ export default function FolioCard({ index, title, img, gitLink, liveLink, about,
   }
 
   return (
-    <div ref={ref}>
+    <div ref={ref} className="w-full">
       <AnimateTitle3
         key={index}
         title={title}
@@ -78,10 +78,10 @@ export default function FolioCard({ index, title, img, gitLink, liveLink, about,
             variants={cardVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="group relative overflow-hidden backdrop-blur-xl bg-secondary/10 hover:bg-secondary/15 border border-secondary/20 hover:border-secondary/30 rounded-t-2xl shadow-2xl hover:shadow-3xl flex flex-col-reverse justify-between items-center gap-10 md:flex-row p-8 mb-8 transition-all duration-500"
+            className="group relative overflow-hidden backdrop-blur-xl bg-secondary/10 hover:bg-secondary/15 border border-secondary/20 hover:border-secondary/30 rounded-t-3xl shadow-xl hover:shadow-2xl flex flex-col-reverse justify-between items-center gap-10 md:flex-row p-8 mb-8 transition-all duration-500"
             whileHover={{
               scale: 1.02,
-              y: -10,
+              y: 10,
               boxShadow: "0 25px 50px rgba(0,0,0,0.15)",
             }}
             transition={{ duration: 0.3 }}
@@ -94,7 +94,7 @@ export default function FolioCard({ index, title, img, gitLink, liveLink, about,
               transition={{ duration: 0.5 }}
             />
 
-            {/* Enhanced Shine Effect */}
+            {/* Shine Effect */}
             <motion.div
               className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 opacity-0 group-hover:opacity-100"
               initial={{ x: "-100%" }}
@@ -133,15 +133,15 @@ export default function FolioCard({ index, title, img, gitLink, liveLink, about,
 
             {/* Content Section */}
             <motion.div
-              className="flex-1 relative z-10"
+              className="flex-1 relative z-10 md:w-[60%] lg:w-[70%] xl:w-[75%] " 
               variants={contentVariants}
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
             >
               {/* Links Section */}
-              <div className="flex justify-between items-center sm:justify-end sm:items-end mb-6">
+              <div className="flex justify-between items-center mb-6 md:justify-end md:items-end">
                 <motion.h2
-                  className="text-2xl font-bold text-primary sm:hidden bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
+                  className="text-2xl font-bold text-secondary md:hidden "
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ delay: index * 0.2 + 0.7 }}
@@ -161,7 +161,7 @@ export default function FolioCard({ index, title, img, gitLink, liveLink, about,
                     >
                       <Link href={gitLink} target="_blank" rel="noopener noreferrer">
                         <div className="p-3 rounded-full backdrop-blur-md bg-secondary/10 hover:bg-secondary/20 border border-secondary/20 hover:border-secondary/30 transition-all duration-300">
-                          <FaGithub className="text-xl text-foreground/80 group-hover/icon:text-foreground transition-colors duration-300" />
+                          <FaGithub className="text-xl text-foreground/80 group-hover/icon:text-accent transition-colors duration-200" />
                         </div>
                       </Link>
                       <motion.div
@@ -183,7 +183,7 @@ export default function FolioCard({ index, title, img, gitLink, liveLink, about,
                     >
                       <Link href={liveLink} target="_blank" rel="noopener noreferrer">
                         <div className="p-3 rounded-full backdrop-blur-md bg-secondary/10 hover:bg-secondary/20 border border-secondary/20 hover:border-secondary/30 transition-all duration-300">
-                          <FaExternalLinkAlt className="text-xl text-foreground/80 group-hover/icon:text-foreground transition-colors duration-300" />
+                          <FaExternalLinkAlt className="text-xl text-foreground/80 group-hover/icon:text-accent transition-colors duration-200" />
                         </div>
                       </Link>
                       <motion.div
@@ -226,7 +226,7 @@ export default function FolioCard({ index, title, img, gitLink, liveLink, about,
 
             {/* Image Section */}
             <motion.div
-              className="relative flex-shrink-0"
+              className="relative flex-shrink-0 md:w-[40%]"
               variants={imageVariants}
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}

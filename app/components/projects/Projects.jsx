@@ -23,7 +23,7 @@ const Projects = () => {
   }
 
   return (
-    <section id="projects" className="relative mx-4 sm:mx-10 my-20 border-t-[1px] border-border/30" ref={ref}>
+    <section id="projects" className="relative w-full mx-4 sm:mx-10 my-20 border-t-[1px] border-foreground/30 " ref={ref}>
       {/* Background Elements */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <motion.div
@@ -63,17 +63,17 @@ const Projects = () => {
         <AnimateTitle2 text="PROJECTS" italicIndex={2} delay={0.06} />
 
         {/* Decorative Line */}
-        <motion.div
+        {/* <motion.div
           className="absolute -bottom-4 left-0 h-1 bg-gradient-to-r from-primary via-secondary to-accent rounded-full"
           initial={{ width: 0 }}
           animate={isInView ? { width: "200px" } : { width: 0 }}
           transition={{ delay: 1, duration: 1.5, ease: "easeOut" }}
-        />
+        /> */}
       </motion.div>
 
       {/* Projects Grid */}
       <motion.div
-        className="flex flex-col items-center justify-center"
+        className="flex flex-col items-center justify-center w-full gap-10"
         variants={containerVariants}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}

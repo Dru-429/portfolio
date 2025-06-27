@@ -47,7 +47,7 @@ const AnimateTitle3 = ({ sno, title, child }) => {
       onMouseEnter={handelEnter}
       onMouseLeave={handelExit}
     >
-      <div className="hidden md:flex gap-1 absolute top-10 left-10  ">
+      <div className="hidden md:flex gap-1 absolute top-10 left-10  z-20 text-secondary">
 
         <div className="flex relative top-1">
           {Sno.split(" ").map((item, index) => {
@@ -119,7 +119,7 @@ const AnimateTitle3 = ({ sno, title, child }) => {
             if (index == 0 || index % 2 == 0) {
               return (
                 <span
-                  className="text-2xl font-semibold text-primary relative h-[32px] flex flex-col overflow-y-hidden pl-1"
+                  className="text-2xl font-semibold text-secondary relative h-[32px] flex flex-col overflow-y-hidden pl-1"
                   key={index}
                 >
                   <motion.div
@@ -151,7 +151,7 @@ const AnimateTitle3 = ({ sno, title, child }) => {
             } else {
               return (
                 <span
-                  className="text-2xl font-semibold text-primary relative h-[32px] flex flex-col overflow-y-hidden pl-1"
+                  className="text-2xl font-semibold text-secondary relative h-[32px] flex flex-col overflow-y-hidden pl-1"
                   key={index}
                 >
                   <motion.div
