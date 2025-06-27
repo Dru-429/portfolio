@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import { motion, useInView } from "framer-motion"
-import { useRef } from "react"
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
-import { IoLogoHtml5, IoLogoCss3, IoLogoReact } from "react-icons/io5"
+import { IoLogoHtml5, IoLogoCss3, IoLogoReact } from "react-icons/io5";
 import {
   SiTailwindcss,
   SiFramer,
@@ -14,40 +14,100 @@ import {
   SiMongodb,
   SiNextdotjs,
   SiPostman,
-} from "react-icons/si"
-import { FaJs, FaFigma, FaGithub } from "react-icons/fa6"
-import { TbApi } from "react-icons/tb"
-import { RiFirebaseFill } from "react-icons/ri"
-import AnimateTitle2 from "../ui/AnimateTitle2"
-import { FaNodeJs } from "react-icons/fa"
-import { BiLogoTypescript } from "react-icons/bi"
+} from "react-icons/si";
+import { FaJs, FaFigma, FaGithub } from "react-icons/fa6";
+import { TbApi } from "react-icons/tb";
+import { RiFirebaseFill } from "react-icons/ri";
+import AnimateTitle2 from "../ui/AnimateTitle2";
+import { FaNodeJs } from "react-icons/fa";
+import { BiLogoTypescript } from "react-icons/bi";
 
 const TechStack = () => {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const techStackData = [
-    { name: "HTML", icon: <IoLogoHtml5 />, color: "from-orange-400 to-red-500" },
+    {
+      name: "HTML",
+      icon: <IoLogoHtml5 />,
+      color: "from-orange-400 to-red-500",
+    },
     { name: "CSS", icon: <IoLogoCss3 />, color: "from-blue-400 to-blue-600" },
-    { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "from-cyan-400 to-teal-500" },
-    { name: "JavaScript", icon: <FaJs />, color: "from-yellow-400 to-orange-500" },
-    { name: "TypeScript", icon: <BiLogoTypescript />, color: "from-blue-500 to-indigo-600" },
-    { name: "React JS", icon: <IoLogoReact />, color: "from-cyan-400 to-blue-500" },
+    {
+      name: "Tailwind CSS",
+      icon: <SiTailwindcss />,
+      color: "from-cyan-400 to-teal-500",
+    },
+    {
+      name: "JavaScript",
+      icon: <FaJs />,
+      color: "from-yellow-400 to-orange-500",
+    },
+    {
+      name: "TypeScript",
+      icon: <BiLogoTypescript />,
+      color: "from-blue-500 to-indigo-600",
+    },
+    {
+      name: "React JS",
+      icon: <IoLogoReact />,
+      color: "from-cyan-400 to-blue-500",
+    },
     { name: "Next JS", icon: <SiNextdotjs />, color: "from-gray-700 to-black" },
-    { name: "Node JS", icon: <FaNodeJs />, color: "from-green-500 to-green-700" },
-    { name: "Express JS", icon: <FaNodeJs />, color: "from-gray-600 to-gray-800" },
-    { name: "Framer Motion", icon: <SiFramer />, color: "from-pink-500 to-purple-600" },
-    { name: "Context API", icon: <TbApi />, color: "from-purple-500 to-indigo-600" },
-    { name: "Mongo DB", icon: <SiMongodb />, color: "from-green-600 to-green-800" },
-    { name: "Firebase", icon: <RiFirebaseFill />, color: "from-yellow-500 to-orange-600" },
-    { name: "Appwrite", icon: <SiAppwrite />, color: "from-pink-500 to-red-600" },
-    { name: "Gen AI", icon: <SiGooglegemini />, color: "from-blue-400 to-purple-500" },
+    {
+      name: "Node JS",
+      icon: <FaNodeJs />,
+      color: "from-green-500 to-green-700",
+    },
+    {
+      name: "Express JS",
+      icon: <FaNodeJs />,
+      color: "from-gray-600 to-gray-800",
+    },
+    {
+      name: "Framer Motion",
+      icon: <SiFramer />,
+      color: "from-pink-500 to-purple-600",
+    },
+    {
+      name: "Context API",
+      icon: <TbApi />,
+      color: "from-purple-500 to-indigo-600",
+    },
+    {
+      name: "Mongo DB",
+      icon: <SiMongodb />,
+      color: "from-green-600 to-green-800",
+    },
+    {
+      name: "Firebase",
+      icon: <RiFirebaseFill />,
+      color: "from-yellow-500 to-orange-600",
+    },
+    {
+      name: "Appwrite",
+      icon: <SiAppwrite />,
+      color: "from-pink-500 to-red-600",
+    },
+    {
+      name: "Gen AI",
+      icon: <SiGooglegemini />,
+      color: "from-blue-400 to-purple-500",
+    },
     { name: "Figma", icon: <FaFigma />, color: "from-purple-500 to-pink-500" },
     { name: "Notion", icon: <SiNotion />, color: "from-gray-700 to-black" },
     { name: "Github", icon: <FaGithub />, color: "from-gray-600 to-gray-900" },
-    { name: "Postman", icon: <SiPostman />, color: "from-orange-500 to-red-500" },
-    { name: "Hostinger", icon: <SiHostinger />, color: "from-purple-600 to-indigo-700" },
-  ]
+    {
+      name: "Postman",
+      icon: <SiPostman />,
+      color: "from-orange-500 to-red-500",
+    },
+    {
+      name: "Hostinger",
+      icon: <SiHostinger />,
+      color: "from-purple-600 to-indigo-700",
+    },
+  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -58,7 +118,7 @@ const TechStack = () => {
         delayChildren: 0.3,
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: {
@@ -81,11 +141,11 @@ const TechStack = () => {
         duration: 0.8,
       },
     },
-  }
+  };
 
   return (
     <section id="techstack" ref={ref}>
-      <div className="w-full min-h-screen py-20 sm:pb-10 sm:px-10 px-2 flex flex-col sm:flex-row justify-between items-start relative overflow-hidden">
+      <div className="w-full min-h-screen py-20 sm:pb-10 sm:px-10 sm:mt-10 px-2 flex flex-col sm:flex-row justify-between items-start relative overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0 -z-10">
           <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-pulse" />
@@ -162,11 +222,41 @@ const TechStack = () => {
                     <motion.div
                       className="w-3 h-3 rounded-full bg-gradient-to-r from-primary to-secondary"
                       animate={{ scale: [1, 1.2, 1] }}
-                      transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+                      transition={{
+                        duration: 2,
+                        repeat: Number.POSITIVE_INFINITY,
+                        ease: "easeInOut",
+                      }}
                     />
                   </div>
                 </motion.div>
               ))}
+
+              <motion.div
+                className="mt-4 backdrop-blur-md bg-secondary/20 border border-secondary/30 rounded-2xl p-4 w-full"
+                initial={{ opacity: 0, y: 30 }}
+                animate={
+                  isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
+                }
+                transition={{ delay: 1.5, duration: 0.8 }}
+              >
+                <div className="text-center">
+                  <motion.div
+                    className="text-2xl font-bold text-accent mb-1"
+                    animate={{ scale: [1, 1.1, 1] }}
+                    transition={{
+                      duration: 2,
+                      repeat: Number.POSITIVE_INFINITY,
+                      ease: "easeInOut",
+                    }}
+                  >
+                    {techStackData.length}+
+                  </motion.div>
+                  <div className="text-sm text-foreground/70">
+                    Tech I Use to Build Magic--Next Yours
+                  </div>
+                </div>
+              </motion.div>
             </div>
 
             {/* Mobile Compact Layout */}
@@ -220,18 +310,26 @@ const TechStack = () => {
               <motion.div
                 className="mt-8 backdrop-blur-md bg-secondary/20 border border-secondary/30 rounded-2xl p-4"
                 initial={{ opacity: 0, y: 30 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                animate={
+                  isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
+                }
                 transition={{ delay: 1.5, duration: 0.8 }}
               >
                 <div className="text-center">
                   <motion.div
-                    className="text-2xl font-bold text-primary mb-1"
+                    className="text-2xl font-bold text-accent mb-1"
                     animate={{ scale: [1, 1.1, 1] }}
-                    transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+                    transition={{
+                      duration: 2,
+                      repeat: Number.POSITIVE_INFINITY,
+                      ease: "easeInOut",
+                    }}
                   >
                     {techStackData.length}+
                   </motion.div>
-                  <div className="text-sm text-foreground/70">Technologies Mastered</div>
+                  <div className="text-sm text-foreground/70">
+                    Tech I Use to Build Magic--Next Yours
+                  </div>
                 </div>
               </motion.div>
             </div>
@@ -246,7 +344,7 @@ const TechStack = () => {
         }
       `}</style>
     </section>
-  )
-}
+  );
+};
 
-export default TechStack
+export default TechStack;
