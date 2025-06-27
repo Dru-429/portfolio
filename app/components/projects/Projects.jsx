@@ -23,7 +23,7 @@ const Projects = () => {
   }
 
   return (
-    <section id="projects" className="relative w-full mx-4 sm:mx-10 my-20 border-t-[1px] border-foreground/30 " ref={ref}>
+    <section id="projects" className="relative w-full mx-4 sm:mx-10 my-20 border-t-[2px] border-foreground/30 " ref={ref}>
       {/* Background Elements */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <motion.div
@@ -93,13 +93,14 @@ const Projects = () => {
       </motion.div>
 
       {/* Bottom Decoration */}
-      <motion.div
+      {/* <motion.div
         className="flex justify-center mt-16"
         initial={{ opacity: 0, scale: 0 }}
         animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }}
         transition={{ delay: 2, duration: 0.8 }}
       >
         <div className="flex gap-2">
+        
           {[...Array(3)].map((_, i) => (
             <motion.div
               key={i}
@@ -113,10 +114,12 @@ const Projects = () => {
                 repeat: Number.POSITIVE_INFINITY,
                 delay: i * 0.2,
               }}
-            />
+            >
+            
+            </ motion.div>
           ))}
         </div>
-      </motion.div>
+      </motion.div> */}
     </section>
   )
 }
