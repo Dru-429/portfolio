@@ -40,7 +40,7 @@ export function ModeToggle() {
     <div className="relative inline-block text-left">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="group relative overflow-hidden backdrop-blur-md bg-primary/10 hover:bg-primary/20 border border-white/20 hover:border-secondary/20 rounded-2xl px-4 py-2 h-auto md:min-w-[100px] transition-all duration-500 hover:scale-105 hover:shadow-md hover:shadow-background/10"
+        className="group relative overflow-hidden backdrop-blur-md bg-primary/10 hover:bg-primary/20 border border-secondary/20 hover:border-secondary/20 rounded-2xl px-4 py-2 h-auto md:min-w-[100px] transition-all duration-500 hover:scale-105 hover:shadow-md hover:shadow-background/10"
       >
         <div className="absolute inset-0 bg-gradient-to-r from-primary-500/20 via-backgorund-500/20 to-accent-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
@@ -71,14 +71,14 @@ export function ModeToggle() {
 
       {isOpen && (
         <motion.div 
-          className="absolute right-0 z-50 mt-2 w-56 backdrop-blur-2xl bg-secondary/20 border border-white/20 rounded-2xl shadow-2xl shadow-black/20 overflow-hidden"
+          className="absolute right-0 z-50 mt-2 w-56 backdrop-blur-2xl bg-secondary/20 border border-secondary/20 rounded-2xl shadow-2xl shadow-black/20 overflow-hidden"
           initial={{ opacity: 0, scale: 0,}}
           animate={{ opacity: 1, scale: 1, }}
           exit={{ opacity: 0, scale: 0, }} 
           transition={{ duration: 0.3, ease: "easeInOut" }}
         >
           {/* Header */}
-          <div className="px-4 py-3 border-b border-white/10 flex items-center gap-2">
+          <div className="px-4 py-3 border-b border-secondary/10 flex items-center gap-2">
             <Palette className="w-4 h-4 text-foreground/80" />
             <span className="text-sm font-semibold text-foreground/90">Choose Theme</span>
           </div>
@@ -96,7 +96,7 @@ export function ModeToggle() {
                     setTheme(option.value)
                     setIsOpen(false)
                   }}
-                  className={`group relative overflow-hidden rounded-xl p-2 mb-2 cursor-pointer transition-all duration-300 hover:bg-white/10 ${
+                  className={`group relative overflow-hidden rounded-xl p-2 mb-2 cursor-pointer transition-all duration-300 hover:bg-secondary/10 ${
                     isSelected ? "bg-secondary/15 shadow-md" : ""
                   }`}
                 >
