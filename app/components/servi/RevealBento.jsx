@@ -3,6 +3,10 @@ import { twMerge } from "tailwind-merge";
 import { SiNotion } from "react-icons/si";
 import { BsCursorFill } from "react-icons/bs";
 import Eyes from "./Eyes.jsx";
+import { RiRobot3Fill } from "react-icons/ri";
+import { MdEventRepeat } from "react-icons/md";
+import { CgWebsite } from "react-icons/cg";
+import { BiSolidFoodMenu } from "react-icons/bi";
 
 export const RevealBento = () => {
   return (
@@ -17,8 +21,8 @@ export const RevealBento = () => {
       >
         <HeaderBlock />
         <AutomationBlock />
-        <SocialsBlock />
-        <LocationBlock />
+        <RightBlock />
+        <WebBotBlock />
         <BottomBlock />
       </motion.div>
     </div>
@@ -46,10 +50,7 @@ const Block = ({ className, ...rest }) => {
         stiffness: 400,
         damping: 50,
       }}
-      className={twMerge(
-        "col-span-4 rounded-2xl bg-secondary p-6",
-        className
-      )}
+      className={twMerge("col-span-4 rounded-2xl bg-secondary p-6", className)}
       {...rest}
     />
   );
@@ -69,22 +70,17 @@ const HeaderBlock = () => (
   </Block>
 );
 
-const SocialsBlock = () => (
+const RightBlock = () => (
   <>
     <Block
       whileHover={{
-        // rotate: "1.5deg",
         scale: 1.1,
-        backgroundColor: "#FCBF49",
       }}
-      transition={{ duration: 0.2, ease: easeIn }}
-      className="col-span-6 md:col-span-3 bg-accent
-        bg-contain 
-        bg-no-repeat 
-        bg-right 
-        hover:bg-[url('https://skfreelancers.com/wp-content/uploads/2021/03/graphicdesign.png')]"
+      transition={{ duration: 0.1, ease: easeIn }}
+      className="col-span-6 md:col-span-3 bg-accent text-accent-foreground font-semibold hover:bg-foreground hover:text-accent-foreground hover:font-bold transition-all duration-100"
     >
-      <div className="text-2xl font-bold z-10 opacity-90 flex flex-col md:flex-row  gap-1 md:justify-start justify-center items-center  text-background ">
+      <div className="text-2xl z-10 opacity-90 flex flex-col md:flex-row gap-1 justify-center items-center text-background">
+        <BiSolidFoodMenu />
         <div>Digital</div>
         <div>Desgin</div>
       </div>
@@ -92,19 +88,15 @@ const SocialsBlock = () => (
 
     <Block
       whileHover={{
-        // rotate: "-2.5deg",
         scale: 1.1,
-        backgroundColor: "#EAE2B7",
       }}
-      transition={{ duration: 0.2, ease: easeIn }}
-      className="text-background bg-primary col-span-6 text-xl md:col-span-3 bg-contain bg-no-repeat  bg-right-bottom
-                       hover:bg-[url('https://gashwatechnologies.com/images/dynamic_web_designing_himachal_shimla.gif')]
-            "
+      transition={{ duration: 0.1, ease: easeIn }}
+      className="text-primary-foreground bg-primary/80 col-span-6 md:col-span-3 font-semibold hover:bg-primary hover:font-bold transition-all duration-100 bg-contain bg-no-repeat  bg-right-bottom hover:bg-[url('https://gashwatechnologies.com/images/dynamic_web_designing_himachal_shimla.gif')]"
     >
       <div
-        href="#"
-        className="grid h-full place-content-center md:place-content-left text-2xl opacity-90 font-semibold z-0"
+        className="text-2xl z-10 opacity-90 flex flex-col md:flex-row gap-1 justify-center items-center"
       >
+        <CgWebsite /> {" "}
         Web Dev
       </div>
     </Block>
@@ -120,17 +112,16 @@ const SocialsBlock = () => (
       <div className="flex justify-center items-center h-full text-2xl gap-2">
         <span className="text-2xl ">
           {" "}
-          <SiNotion />{"  "}
+          <SiNotion />
+          {"  "}
         </span>
-        <span>
-            Notion Templates
-        </span>
+        <span>Notion Templates</span>
       </div>
     </Block>
   </>
 );
 
-const LocationBlock = () => {
+const WebBotBlock = () => {
   // const ref = useRef();
   // const [position, setPosition] = useState({ x: 0, y: 0 })
 
@@ -165,17 +156,16 @@ const LocationBlock = () => {
   return (
     <Block
       whileHover={{
-        // rotate: "-2.5deg",
         scale: 1.1,
-        backgroundColor: "#F77F00",
       }}
-      // ref={ref}
-
-      className="col-span-6 flex flex-row md:flex-col items-center gap-4 md:col-span-3 bg-secondary text-background hover:bg-secondary hover:text-secondary-foreground transition-all duration-200 text-2xl opacity-90 font-semibold bg-contain bg-no-repeat bg-right 
-        hover:bg-[url('https://lh5.googleusercontent.com/proxy/pPMvV7_tQBcG9EhYe_YKTbjSMpKxtqbmpoP56o_F_0CdfLDdt95ntRwJK9eXhyT6bcCHL0rDCCOrIkFuOsH747KUW9u1lnssvZjF5Y3d')]"
+      transition={{
+        duration: 0.1,
+        ease: easeInOut,
+      }}
+      className="col-span-6 flex flex-row md:flex-col items-center gap-4 md:col-span-3 bg-secondary text-secondary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-100 text-2xl font-semibold hover:font-bold "
     >
-      <p className="mb-3 text-2xl font-semibold flex items-center justify-center w-full gap-2">
-        Smart Web Bots
+      <p className="mb-3 text-2xl flex items-center justify-center w-full gap-2">
+        <RiRobot3Fill /> Smart Web Bots
       </p>
     </Block>
   );
@@ -198,7 +188,8 @@ const AutomationBlock = () => (
     className="col-span-12 md:col-span-9 flex items-center font-semibold bg-accent hover:bg-foreground hover:font-bold text-background "
   >
     <p className="mb-3 text-2xl flex items-center justify-center w-full gap-2">
-        Workflow & Web Automation
+      <MdEventRepeat /> {" "} 
+      Workflow & Web Automation
     </p>
   </Block>
 );
