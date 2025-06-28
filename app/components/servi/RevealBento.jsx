@@ -16,7 +16,7 @@ export const RevealBento = () => {
         className="mx-auto grid w-full grid-flow-dense grid-cols-12 gap-4"
       >
         <HeaderBlock />
-        <NotionListBlock />
+        <AutomationBlock />
         <SocialsBlock />
         <LocationBlock />
         <BottomBlock />
@@ -47,7 +47,7 @@ const Block = ({ className, ...rest }) => {
         damping: 50,
       }}
       className={twMerge(
-        "col-span-4 rounded-2xl border border-secondary bg-secondary p-6",
+        "col-span-4 rounded-2xl bg-secondary p-6",
         className
       )}
       {...rest}
@@ -113,15 +113,18 @@ const SocialsBlock = () => (
       whileHover={{
         // rotate: "-2.5deg",
         scale: 1.1,
-        backgroundColor: "#FCBF49",
       }}
       transition={{ duration: 0.2, ease: easeIn }}
-      className="col-span-6 md:col-span-6 bg-accent text-2xl text-background opacity-90 font-semibold bg-contain bg-no-repeat bg-right 
-                       hover:bg-[url('https://www.innovination.com/wp-content/uploads/2021/06/develpoment.gif')]
-            "
+      className="col-span-6 md:col-span-6 bg-primary/60 text-2xl text-primary-foreground opacity-90 font-semibold hover:bg-primary hover:text-primary-foreground hover:font-bold transition-all duration-200"
     >
-      <div className="flex justify-center items-center h-full text-2xl col">
-        Responsive Design
+      <div className="flex justify-center items-center h-full text-2xl gap-2">
+        <span className="text-2xl ">
+          {" "}
+          <SiNotion />{"  "}
+        </span>
+        <span>
+            Notion Templates
+        </span>
       </div>
     </Block>
   </>
@@ -168,14 +171,11 @@ const LocationBlock = () => {
       }}
       // ref={ref}
 
-      className="col-span-6 flex flex-row md:flex-col items-center gap-4 md:col-span-3 bg-secondary text-background "
+      className="col-span-6 flex flex-row md:flex-col items-center gap-4 md:col-span-3 bg-secondary text-background hover:bg-secondary hover:text-secondary-foreground transition-all duration-200 text-2xl opacity-90 font-semibold bg-contain bg-no-repeat bg-right 
+        hover:bg-[url('https://lh5.googleusercontent.com/proxy/pPMvV7_tQBcG9EhYe_YKTbjSMpKxtqbmpoP56o_F_0CdfLDdt95ntRwJK9eXhyT6bcCHL0rDCCOrIkFuOsH747KUW9u1lnssvZjF5Y3d')]"
     >
       <p className="mb-3 text-2xl font-semibold flex items-center justify-center w-full gap-2">
-        <span className="text-2xl ">
-          {" "}
-          <SiNotion />{" "}
-        </span>
-        Bulding Notion Templates
+        Smart Web Bots
       </p>
     </Block>
   );
@@ -188,22 +188,17 @@ const BottomBlock = () => (
     </p>
   </Block>
 );
-const NotionListBlock = () => (
+const AutomationBlock = () => (
   <Block
     whileHover={{
       // rotate: "-2.5deg",
       scale: 1.05,
     }}
     transition={{ duration: 0.2, ease: easeIn }}
-    className="col-span-12 md:col-span-9 flex items-center bg-foreground text-background hover:bg-secondary hover:text-secondary-foreground transition-all duration-200 text-2xl opacity-90 font-semibold bg-contain bg-no-repeat bg-right 
-        hover:bg-[url('https://lh5.googleusercontent.com/proxy/pPMvV7_tQBcG9EhYe_YKTbjSMpKxtqbmpoP56o_F_0CdfLDdt95ntRwJK9eXhyT6bcCHL0rDCCOrIkFuOsH747KUW9u1lnssvZjF5Y3d')]"
+    className="col-span-12 md:col-span-9 flex items-center font-semibold bg-accent hover:bg-foreground hover:font-bold text-background "
   >
-    <p className="mb-3 text-2xl font-semibold flex items-center justify-center w-full gap-2">
-      <span className="text-2xl ">
-        {" "}
-        <SiNotion />{" "}
-      </span>
-      Bulding Notion Templates
+    <p className="mb-3 text-2xl flex items-center justify-center w-full gap-2">
+        Workflow & Web Automation
     </p>
   </Block>
 );
