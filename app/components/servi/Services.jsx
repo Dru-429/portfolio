@@ -14,7 +14,7 @@ const Services = () => {
           />
         </div>
 
-        <div className="w-full ">
+        <div className="w-full p-6 mt-10 backdrop-blur-xl bg-secondary/10 hover:bg-secondary/15 border border-secondary/20 hover:border-secondary/30 rounded-2xl shadow-xl hover:shadow-2xl flex flex-col-reverse justify-between items-center gap-10 md:flex-row transition-all duration-500">
           <RevealBento />
         </div>
       </div>

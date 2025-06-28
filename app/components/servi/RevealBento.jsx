@@ -10,7 +10,7 @@ import { BiSolidFoodMenu } from "react-icons/bi";
 
 export const RevealBento = () => {
   return (
-    <div className="mt-10  text-background ">
+    <div className="text-background ">
       <motion.div
         initial="initial"
         animate="animate"
@@ -80,7 +80,7 @@ const RightBlock = () => (
       className="col-span-6 md:col-span-3 bg-accent text-accent-foreground font-semibold hover:bg-foreground hover:text-accent-foreground hover:font-bold transition-all duration-100"
     >
       <div className="text-2xl z-10 opacity-90 flex flex-col md:flex-row gap-1 justify-center items-center text-background">
-        <BiSolidFoodMenu />
+        <BiSolidFoodMenu className="hidden sm:visible"/>
         <div>Digital</div>
         <div>Desgin</div>
       </div>
@@ -96,7 +96,7 @@ const RightBlock = () => (
       <div
         className="text-2xl z-10 opacity-90 flex flex-col md:flex-row gap-1 justify-center items-center"
       >
-        <CgWebsite /> {" "}
+        <CgWebsite className="hidden sm:visible"/> {" "}
         Web Dev
       </div>
     </Block>
@@ -107,7 +107,7 @@ const RightBlock = () => (
         scale: 1.1,
       }}
       transition={{ duration: 0.2, ease: easeIn }}
-      className="col-span-6 md:col-span-6 bg-primary/60 text-2xl text-primary-foreground opacity-90 font-semibold hover:bg-primary hover:text-primary-foreground hover:font-bold transition-all duration-200"
+      className="col-span-12 md:col-span-6 bg-primary/60 text-2xl text-primary-foreground opacity-90 font-semibold hover:bg-primary hover:text-primary-foreground hover:font-bold transition-all duration-200"
     >
       <div className="flex justify-center items-center h-full text-2xl gap-2">
         <span className="text-2xl ">
@@ -162,9 +162,9 @@ const WebBotBlock = () => {
         duration: 0.1,
         ease: easeInOut,
       }}
-      className="col-span-6 flex flex-row md:flex-col items-center gap-4 md:col-span-3 bg-secondary text-secondary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-100 text-2xl font-semibold hover:font-bold "
+      className="col-span-12 flex flex-row md:flex-col items-center gap-4 md:col-span-3 bg-secondary text-secondary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-100 text-2xl font-semibold"
     >
-      <p className="mb-3 text-2xl flex items-center justify-center w-full gap-2">
+      <p className=" text-2xl flex items-center justify-center w-full gap-2">
         <RiRobot3Fill /> Smart Web Bots
       </p>
     </Block>
@@ -172,12 +172,13 @@ const WebBotBlock = () => {
 };
 
 const BottomBlock = () => (
-  <Block className="md:hidden visible col-span-12 flex items-center bg-text text-2xl text-background font-semibold">
+  <Block className="md:hidden visible col-span-12 flex items-center bg-foreground text-2xl text-background font-semibold">
     <p className=" text-xl tracking-tighter font-semibold flex items-center justify-center w-full gap-2">
       Think. Design. Built. Launch. Automate.
     </p>
   </Block>
 );
+
 const AutomationBlock = () => (
   <Block
     whileHover={{
