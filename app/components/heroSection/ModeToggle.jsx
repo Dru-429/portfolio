@@ -71,7 +71,7 @@ export function ModeToggle() {
 
       {isOpen && (
         <motion.div 
-          className="absolute right-0 z-50 mt-2 w-56 backdrop-blur-2xl bg-secondary/20 border border-secondary/20 rounded-2xl shadow-2xl shadow-black/20 overflow-hidden"
+          className="absolute right-0 z-50 mt-2 w-56 backdrop-blur-2xl bg-primary/60 border border-primary/70 rounded-2xl shadow-2xl shadow-black/20 overflow-hidden"
           initial={{ opacity: 0, scale: 0,}}
           animate={{ opacity: 1, scale: 1, }}
           exit={{ opacity: 0, scale: 0, }} 

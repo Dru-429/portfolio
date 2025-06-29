@@ -23,7 +23,7 @@ const Process = () => {
       title: "Design + plan the solution.",
       description: "I create clean designs, workflows, or bot plans that align with your vision and business needs.",
       icon: <FaPencilRuler />,
-      color: "from-secondary/20 to-secondary/10",
+      color: "from-primary/20 to-primary/10",
       delay: 0.4,
     },
     {
@@ -41,7 +41,7 @@ const Process = () => {
       description:
         "Once live, I provide support, optimizations, or tweaks as needed — so everything works exactly as you want.",
       icon: <FaRocket />,
-      color: "from-primary/20 to-accent/10",
+      color: "from-accent/20 to-accent/10",
       delay: 0.8,
     },
   ]
@@ -83,7 +83,7 @@ const Process = () => {
       {/* Background Elements */}
       <div className="absolute inset-0 -z-10">
         <motion.div
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl"
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.5, 0.3],
@@ -112,7 +112,7 @@ const Process = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Container with Liquid Glass Effect */}
         <motion.div
-          className="relative backdrop-blur-xl bg-white/10 border border-white/20 rounded-3xl p-8 md:p-12 shadow-2xl"
+          className="relative backdrop-blur-xl bg-secondary/10 border border-secondary/20 rounded-3xl p-8 md:p-12 shadow-2xl"
           initial={{ opacity: 0, scale: 0.9, filter: "blur(20px)" }}
           animate={
             isInView ? { opacity: 1, scale: 1, filter: "blur(0px)" } : { opacity: 0, scale: 0.9, filter: "blur(20px)" }
