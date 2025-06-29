@@ -11,33 +11,32 @@ const Process = () => {
   const processSteps = [
     {
       number: "1",
-      title: "Share your vision.",
+      title: "Discover Your Vision",
       description:
-        "We start by understanding your goals, style preferences, and specific needs — from websites to automations.",
+        "We start by understanding your goals and aspirations, style preferences, and specific needs — from websites to automations.",
       icon: <FaLightbulb />,
       color: "from-primary/20 to-primary/10",
       delay: 0.2,
     },
     {
       number: "2",
-      title: "Design + plan the solution.",
-      description: "I create clean designs, workflows, or bot plans that align with your vision and business needs.",
+      title: "Strategize & Design",
+      description: "I craft clean blue prints, designs, workflows, or bot plans that align with your vision and business needs.",
       icon: <FaPencilRuler />,
       color: "from-primary/20 to-primary/10",
       delay: 0.4,
     },
     {
       number: "3",
-      title: "Build & automate.",
-      description:
-        "I develop the website or automation system, ensuring smooth functionality, responsiveness, and modern UI.",
+      title: "Build Automate & Bring It to Life",
+      description: "I build your digital solution with care and dedication focused on delivering smooth functionality and reliable performance that truly works for you.",
       icon: <FaCode />,
       color: "from-accent/20 to-accent/10",
       delay: 0.6,
     },
     {
       number: "4",
-      title: "Launch & support.",
+      title: "Launch & Evolve .",
       description:
         "Once live, I provide support, optimizations, or tweaks as needed — so everything works exactly as you want.",
       icon: <FaRocket />,
@@ -79,7 +78,7 @@ const Process = () => {
   }
 
   return (
-    <section className="w-full py-20 md:py-32 relative overflow-hidden" ref={ref}>
+    <section className="w-full pb-44 relative overflow-hidden" ref={ref}>
       {/* Background Elements */}
       <div className="absolute inset-0 -z-10">
         <motion.div
@@ -164,9 +163,9 @@ const Process = () => {
                   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                   transition={{ duration: 0.8, delay: 0.3 }}
                 >
-                  How Does It{" "}
+                   Bringing Your Vision to {" "}
                   <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                    Work?
+                    Life
                   </span>
                 </motion.h2>
 
@@ -294,50 +293,13 @@ const Process = () => {
 
           {/* Bottom Connecting Line */}
           <motion.div
-            className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-primary via-secondary to-accent rounded-full"
+            className="absolute bottom-2 md:bottom-7 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-primary via-secondary to-accent rounded-full"
             initial={{ width: 0 }}
             animate={isInView ? { width: "8rem" } : { width: 0 }}
             transition={{ delay: 1.5, duration: 1, ease: "easeOut" }}
           />
         </motion.div>
 
-        {/* Bottom Stats */}
-        <motion.div
-          className="flex justify-center mt-12"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ delay: 2, duration: 0.8 }}
-        >
-          <div className="flex gap-8 backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl px-8 py-4">
-            {[
-              { number: "4", label: "Simple Steps" },
-              { number: "100%", label: "Success Rate" },
-              { number: "24/7", label: "Support" },
-            ].map((stat, index) => (
-              <motion.div
-                key={index}
-                className="text-center"
-                initial={{ opacity: 0, scale: 0 }}
-                animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }}
-                transition={{ delay: 2.2 + index * 0.1, duration: 0.6 }}
-              >
-                <motion.div
-                  className="text-xl md:text-2xl font-bold text-primary mb-1"
-                  animate={{ scale: [1, 1.05, 1] }}
-                  transition={{
-                    duration: 2,
-                    repeat: Number.POSITIVE_INFINITY,
-                    ease: "easeInOut",
-                    delay: index * 0.3,
-                  }}
-                >
-                  {stat.number}
-                </motion.div>
-                <div className="text-xs md:text-sm text-foreground/70">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   )
