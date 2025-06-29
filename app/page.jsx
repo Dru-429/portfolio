@@ -12,6 +12,7 @@ import ParallaxScroll from './components/parallaxScroll/ParallaxScroll.jsx';
 import Contact from './components/contact/Contact.jsx';
 import Projects from './components/projects/Projects.jsx';
 import Navbar from './components/heroSection/Navbar.jsx';
+import Process from './components/process/Process.jsx';
 
 
 const page = () => {    
@@ -26,6 +27,7 @@ const page = () => {
       <TeachStack />
       <Projects />
       <Services />
+      <Process />
       <ParallaxScroll />
       <Contact />
     </main>
