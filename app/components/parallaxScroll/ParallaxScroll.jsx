@@ -58,7 +58,7 @@ const ParallaxScroll = () => {
   });
 
   return (
-    <div className="my-20 ">
+    <div className="my-20 max-w-[99%]">
       <div
         ref={container}
         className="h-[175vh] bg-zinc-800 flex gap-[2vw] box-border p-4 overflow-hidden relative"
