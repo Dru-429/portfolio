@@ -234,7 +234,7 @@ const Process = () => {
                     {/* Step Number and Icon */}
                     <div className="flex items-center justify-between mb-4">
                       <motion.div
-                        className="text-4xl md:text-5xl font-bold text-primary group-hover:text-secondary transition-colors duration-300"
+                        className="text-4xl md:text-5xl font-bold text-secondary md:text-primary group-hover:text-secondary transition-colors duration-300"
                         whileHover={{ scale: 1.1, rotate: 5 }}
                         transition={{ duration: 0.3 }}
                       >

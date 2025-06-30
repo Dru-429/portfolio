@@ -5,11 +5,12 @@ import { easeIn, motion } from "framer-motion";
 import AnimateTitle from "../ui/AnimateTitle.jsx";
 import Link from "next/link.js";
 import { SiGithub } from "react-icons/si";
+import CircularBackground from "../ui/circular-background.jsx";
 const HeroSection = () => {
   return (
     <section id="home">
-      <div className="w-100% min-h-screen relative">
-        <div className="mt-[30vh] mb-28 md:mb-0 mx-2 md:mx-10 md:w-1/2 md:text-left">
+      <div className="w-100% max-h-screen relative mb-28 md:mb-48 ">
+        <div className="mt-[30vh] md:mt-[40vh] mb-20 md:mb-0 mx-2 md:mx-10 md:w-1/2 md:text-left">
           <div className="md:flex justify-between items-start leading-none tracking-tighter relative">
             <motion.span className="text-lg px-1 relative top-3 text-foreground right-4 border-bottom-[1px] border-foreground">
               Dhruv Sahoo
@@ -33,6 +34,7 @@ const HeroSection = () => {
             workflow. Crafting seamless digital experiences — from pixel — perfect
             frontends to powerful web automations.
           </p>
+          <CircularBackground />
         </div>
 
         <div className="px-2 md:px-10 border-t-[1px] mt-24 border-foreground flex justify-between items-center relative">
