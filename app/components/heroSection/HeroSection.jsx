@@ -10,31 +10,37 @@ const HeroSection = () => {
   return (
     <section id="home">
       <div className="w-100% max-h-screen relative mb-28 md:mb-48 ">
-        <div className="mt-[30vh] md:mt-[40vh] mb-20 md:mb-0 mx-2 md:mx-10 md:w-1/2 md:text-left">
-          <div className="md:flex justify-between items-start leading-none tracking-tighter relative">
-            <motion.span className="text-lg px-1 relative top-3 text-foreground right-4 border-bottom-[1px] border-foreground">
-              Dhruv Sahoo
-              <motion.div
-                initial={{ width: 0 }}
-                animate={{ width: 100 }}
-                transition={{ duration: 1, ease: easeIn }}
-                className="h-[2px] bg-secondary"
-              ></motion.div>
-            </motion.span>
+        <div className="mt-[30vh] md:mt-[40vh] mb-20 md:mb-0 mx-2 md:mx-10 md:text-left flex flex-col md:flex-row-reverse gap-4 md:gap-8">
+          {/* Left side */}
+          <div className="md:w-1/2">
+            <div className="md:flex justify-between items-start leading-none tracking-tighter relative">
+              <motion.span className="text-lg px-1 relative top-3 text-foreground right-4 border-bottom-[1px] border-foreground">
+                Dhruv Sahoo
+                <motion.div
+                  initial={{ width: 0 }}
+                  animate={{ width: 100 }}
+                  transition={{ duration: 1, ease: easeIn }}
+                  className="h-[2px] bg-secondary"
+                ></motion.div>
+              </motion.span>
 
-            <AnimateTitle first="Web Devel" italic="o" second="per" />
+              <AnimateTitle first="Web Devel" italic="o" second="per" />
+            </div>
+
+            <span className="text-4xl md:text-6xl font-[600] tracking-tight bg-gradient-to-r from-secondary to-accent text-transparent bg-clip-text pt-8">
+              & Automation Builder
+            </span>
+
+            <p className="mt-7 w-[95%] text-foreground tracking-tight text-lg">
+              Building stunning websites and smart bots that automate your
+              workflow. Crafting seamless digital experiences — from pixel —
+              perfect frontends to powerful web automations.
+            </p>
           </div>
 
-          <span className="text-4xl md:text-6xl font-[600] tracking-tight bg-gradient-to-r from-secondary to-accent text-transparent bg-clip-text pt-8">
-            & Automation Builder
-          </span>
-
-          <p className="mt-7 w-[95%] text-foreground tracking-tight text-lg">
-            Building stunning websites and smart bots that automate your
-            workflow. Crafting seamless digital experiences — from pixel — perfect
-            frontends to powerful web automations.
-          </p>
-          <CircularBackground />
+          <div className="w-1/2 flex justify-center items-center relative md:-top-20">
+            <CircularBackground />
+          </div>
         </div>
 
         <div className="px-2 md:px-10 border-t-[1px] mt-24 border-foreground flex justify-between items-center relative">
