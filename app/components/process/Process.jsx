@@ -163,9 +163,8 @@ const Process = () => {
                   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                   transition={{ duration: 0.8, delay: 0.3 }}
                 >
-                   Bringing Your Vision to {" "}
+                   Bringing Your Vision to Life{" "}
                   <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                    Life
                   </span>
                 </motion.h2>
 

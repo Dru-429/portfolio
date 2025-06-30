@@ -20,16 +20,31 @@ const page = () => {
   // const blobity = useBlobity(initialBlobityOptions)
 
   return (
-    <main className='bg-background text-foreground relative'>
-      <Navbar />
-      <HeroSection />
-      <About />
-      <TeachStack />
-      <Projects />
-      <Services />
-      <Process />
-      <ParallaxScroll />
-      <Contact />
+    <main className='bg-background text-foreground relative w-screen box-border overflow-x-hidden'>
+      <nav className='w-full flex items-center justify-center fixed top-2 md:top-4 z-50'>
+        <div className='w-[98%] sm:w-[90%]'>
+          <Navbar />
+        </div>
+      </nav>
+      {/*The top div*/}
+      <div className='max-w-[95%] xl:max-w-[1223px] w-full mx-auto flex flex-col justify-center'>
+        <HeroSection />
+        <About />
+        <TeachStack />
+        <Projects />
+        <Services />
+        <Process />
+      </div>
+
+      {/*The screen size parallax scroll*/} 
+      <div className='w-full'>
+        <ParallaxScroll />
+      </div>
+
+      {/*Footer--Contact & label */}
+      <footer className="max-w-[95%] xl:max-w-[1223px] w-full mx-auto overflow-x-hidden flex flex-col justify-center">
+        <Contact />
+      </footer>
     </main>
   )
 }

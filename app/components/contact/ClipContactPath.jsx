@@ -1,5 +1,5 @@
 "use cleint";
-import React, { useState } from "react";
+import React from "react";
 import {
   SiAdobe,
   SiApple,
