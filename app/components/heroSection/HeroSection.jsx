@@ -10,7 +10,8 @@ const HeroSection = () => {
   return (
     <section id="home">
       <div className="w-100% max-h-screen relative mb-28 md:mb-48 ">
-        <div className="mt-[30vh] md:mt-[40vh] mb-20 md:mb-0 mx-2 md:mx-10 md:text-left flex flex-col md:flex-row-reverse gap-4 md:gap-8">
+        <div className="mt-[10vh] md:mt-[40vh] mb-20 md:mb-0 mx-2 md:mx-10 md:text-left flex flex-col-reverse md:flex-row gap-4 md:gap-8">
+
           {/* Left side */}
           <div className="md:w-1/2">
             <div className="md:flex justify-between items-start leading-none tracking-tighter relative">
@@ -38,12 +39,13 @@ const HeroSection = () => {
             </p>
           </div>
 
-          <div className="w-1/2 flex justify-center items-center relative md:-top-20">
+          {/* Right side - Image */}
+          <div className="md:w-1/3 flex justify-center items-center relative md:-top-10 md:left-16">
             <CircularBackground />
           </div>
         </div>
 
-        <div className="px-2 md:px-10 border-t-[1px] mt-24 border-foreground flex justify-between items-center relative">
+        <div className="px-2 md:px-10 border-t-[1px] mt-20 border-foreground flex justify-between items-center relative">
           <div className=" py-5 text-md text-foreground/80">
             <h3>Email:</h3>
             <p>contact.dhruvsahoo@gmail.com</p>

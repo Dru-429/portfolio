@@ -59,7 +59,7 @@ const CircularBackground = ({ className = "" }) => {
              C 125 150, 175 125, 200 125"
           fill="none"
           stroke="currentColor"
-          strokeWidth="7"
+          strokeWidth="8"
           strokeLinecap="round"
           className="text-primary/90 dark:text-primary/90"
           initial={{ pathLength: 0, opacity: 0 }}
@@ -76,7 +76,7 @@ const CircularBackground = ({ className = "" }) => {
              C 160 175, 185 160, 200 160"
           fill="none"
           stroke="currentColor"
-          strokeWidth="6"
+          strokeWidth="7"
           strokeLinecap="round"
           className="text-foreground/80 dark:text-foreground/90"
           initial={{ pathLength: 0, opacity: 0 }}
