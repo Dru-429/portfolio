@@ -24,18 +24,18 @@ const ClipPathLinks = () => {
       </div>
 
       {/* Main Grid Container */}
-      <div className="backdrop-blur-md bg-white/10 border border-white/20 rounded-3xl overflow-hidden shadow-2xl">
+      <div className="backdrop-blur-md bg-primary/20 border border-primary/30 rounded-3xl overflow-hidden shadow-2xl">
         {/* Desktop Layout */}
-        <div className="hidden lg:grid lg:grid-cols-2 divide-x divide-white/20">
+        <div className="hidden lg:grid lg:grid-cols-2 divide-x divide-primary">
           {/* Left Column - Social Links */}
-          <div className="grid grid-rows-2 divide-y divide-white/20">
+          <div className="grid grid-rows-2 divide-y divide-primary/20">
             {/* Email Row */}
             <div className="grid grid-cols-1">
               <LinkBox Icon={IoMdMail} href="mailto:contact.dhruvsahoo@gmail.com" Text="contact.dhruvsahoo@gmail.com" />
             </div>
 
             {/* Social Media Row */}
-            <div className="grid grid-cols-2 divide-x divide-white/20">
+            <div className="grid grid-cols-2 divide-x divide-primary/20">
               <LinkBox Icon={SiGithub} href="https://github.com/Dru-429" />
               <LinkBox Icon={SiLinkedin} href="https://www.linkedin.com/in/dhruvsahoo/" />
             </div>
@@ -48,11 +48,11 @@ const ClipPathLinks = () => {
         </div>
 
         {/* Tablet Layout */}
-        <div className="hidden md:grid lg:hidden md:grid-cols-2 divide-x divide-white/20">
-          {/* Left Column */}
-          <div className="space-y-0 divide-y divide-white/20">
+        <div className="hidden md:grid lg:hidden md:grid-cols-2 divide-x divide-primary/20">
+          {/* Left Column */}y
+          <div className="space-y-0 divide-y divide-primar/20">
             <LinkBox Icon={IoMdMail} href="mailto:contact.dhruvsahoo@gmail.com" Text="contact.dhruvsahoo@gmail.com" />
-            <div className="grid grid-cols-2 divide-x divide-white/20">
+            <div className="grid grid-cols-2 divide-x divide-primary/20">
               <LinkBox Icon={SiGithub} href="https://github.com/Dru-429" />
               <LinkBox Icon={SiLinkedin} href="https://www.linkedin.com/in/dhruvsahoo/" />
             </div>
@@ -65,12 +65,12 @@ const ClipPathLinks = () => {
         </div>
 
         {/* Mobile Layout */}
-        <div className="grid md:hidden grid-cols-1 divide-y divide-white/20">
+        <div className="grid md:hidden grid-cols-1 divide-y divide-primary/20">
           {/* Email */}
           <LinkBox Icon={IoMdMail} href="mailto:contact.dhruvsahoo@gmail.com" Text="contact.dhruvsahoo@gmail.com" />
 
           {/* Social Media Row */}
-          <div className="grid grid-cols-2 divide-x divide-white/20">
+          <div className="grid grid-cols-2 divide-x divide-primary/20">
             <LinkBox Icon={SiGithub} href="https://github.com/Dru-429" />
             <LinkBox Icon={SiLinkedin} href="https://www.linkedin.com/in/dhruvsahoo/" />
           </div>

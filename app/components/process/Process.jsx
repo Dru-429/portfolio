@@ -252,7 +252,7 @@ const Process = () => {
 
                     {/* Step Title */}
                     <motion.h3
-                      className="text-lg md:text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300"
+                      className="text-lg md:text-xl font-bold text-foreground mb-3 transition-colors duration-300"
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: step.delay + 0.2 }}
