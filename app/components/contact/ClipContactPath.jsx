@@ -1,18 +1,9 @@
 "use cleint";
 import React from "react";
 import {
-  SiAdobe,
-  SiApple,
-  SiFacebook,
-  SiGoogle,
   SiGmail,
   SiLinkedin,
-  SiShopify,
-  SiSoundcloud,
   SiGithub,
-  SiSpotify,
-  SiTiktok,
-  SiInstagram,
 } from "react-icons/si";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
@@ -33,10 +24,10 @@ export const SocialLinks = () => {
 
 const ClipPathLinks = () => {
   return (
-    <div className="divide-y divide-primary border border-primary">
-      <div className="grid grid-cols-1 divide-x divide-primary">
+    <div className="divide-y divide-primary border border-primary mt-20 rounded-2xl">
+      {/* <div className="grid grid-cols-1 divide-x divide-primary">
         <ContactForm />
-      </div>
+      </div> */}
 
       <div className="grid grid-cols-2 divide-y divide-x divide-primary">
 

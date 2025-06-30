@@ -28,8 +28,7 @@ const ContactForm = () => {
 
   return (
     <motion.div
-      className='text-foreground px-2 py-4 w-full h-full  relative'
-      whileHover={{ backgroundColor: "#EAE2B7", color: "#01151f" }}
+      className='text-foreground hover:text-background hover:bg-foreground px-2 py-4 w-full h-full relative'
     >
 
       <form onSubmit={handleSubmit} className='relative'>
@@ -39,7 +38,7 @@ const ContactForm = () => {
           <div className='relative'>
             <label htmlFor="name">Name:</label>
             <input
-              className='bg-background outline-none rounded-lg px-2 py-3 ml-2 h-6 text-sm border-[1px] border-secondary focus:border-accent hover:border-accent text-foreground  w-80'
+              className='bg-background outline-none rounded-lg px-2 py-3 ml-2 h-6 text-sm border-[1px] border-pramiry focus:border-primary/70 hover:border-accent text-foreground  w-80'
               type="text"
               placeholder='John Dior'
               id="name"
