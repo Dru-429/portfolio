@@ -22,7 +22,7 @@ const Location = () => {
 
   return (
     <div className="w-full h-full grid grid-cols-2 divide-x divide-secondary text-accent p-2 box-border">
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center px-5 sm:px-1">
         <img
           src="/images/onPc.gif"
           alt="working"
@@ -32,7 +32,7 @@ const Location = () => {
         <p className="pt-4">{currentTime} IST</p>
       </div>
 
-      <div className="flex flex-col items-center justify-center" >
+      <div className="flex flex-col items-center justify-center text-foreground/80" >
         <img
           src="/images/globe.gif"
           alt="working"
@@ -40,7 +40,7 @@ const Location = () => {
         //   fill
         //   style={{ width: "80%", height: "60%" }}
         />
-        <p className="pt-4">Delhi,India</p>
+        <p className="pt-4">New Delhi, India</p>
       </div>
     </div>
   );
