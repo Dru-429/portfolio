@@ -145,7 +145,7 @@ const TechStack = () => {
 
   return (
     <section id="techstack" ref={ref}>
-      <div className="w-full min-h-screen py-20 sm:pb-10 sm:px-10 sm:mt-10 px-2 flex flex-col sm:flex-row justify-between items-start relative overflow-hidden">
+      <div className="w-full min-h-screen py-20 md:pb-10 md:px-10 md:mt-10 px-2 flex flex-col md:flex-row justify-between items-start relative overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0 -z-10">
           <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-pulse" />
@@ -153,7 +153,7 @@ const TechStack = () => {
         </div>
 
         {/* Title Section */}
-        <div className="relative mb-8 sm:mb-0">
+        <div className="relative mb-8 md:mb-0">
           <AnimateTitle2 text="Tech Stack" delay={0.05} />
           {/* <motion.div
             className="absolute -bottom-2 left-0 h-1 bg-gradient-to-r from-primary via-secondary to-accent rounded-full"
@@ -164,15 +164,15 @@ const TechStack = () => {
         </div>
 
         {/* Tech Stack Grid */}
-        <div className=" w-[100%] sm:w-[70%] flex justify-center items-center">
+        <div className=" w-[100%] md:w-[70%] flex justify-center items-center">
           <motion.div
-            className="flex gap-4 flex-wrap w-[90%] sm:w-[100%] justify-center items-center md:justify-start"
+            className="flex gap-4 flex-wrap w-[90%] md:w-[100%] justify-center items-center md:justify-start"
             variants={containerVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
           >
             {/* Desktop Layout */}
-            <div className="hidden sm:flex gap-4 flex-wrap">
+            <div className="hidden md:flex gap-4 flex-wrap">
               {techStackData.map((tech, index) => (
                 <motion.div
                   key={index}
@@ -260,7 +260,7 @@ const TechStack = () => {
             </div>
 
             {/* Mobile Compact Layout */}
-            <div className="sm:hidden w-full">
+            <div className="md:hidden w-full">
               <motion.div
                 className="grid grid-cols-2 gap-3"
                 variants={containerVariants}

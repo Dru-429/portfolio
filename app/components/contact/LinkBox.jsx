@@ -84,10 +84,10 @@ const LinkBox = ({ Icon, href, Text, element  }) => {
         onMouseLeave={(e) => {
           handleMouseLeave(e);
         }}
-        className="relative grid h-20 w-full place-content-center sm:h-28 md:h-36 text-foreground hover:text-background transition-colors duration-200 ease-in-out rounded-lg border border-primary/50 hover:border-secondary/50"
+        className="relative grid h-20 w-full place-content-center md:h-28 md:h-36 text-foreground hover:text-background transition-colors duration-200 ease-in-out rounded-lg border border-primary/50 hover:border-secondary/50"
       >
         <div className="flex flex-col items-center relative">
-          <Icon className="text-xl sm:text-2xl lg:text-4xl " />
+          <Icon className="text-xl md:text-2xl lg:text-4xl " />
           <div className="text-sm z-10 absolute -bottom-5 md:text-normal">
             {Text}
           </div>
@@ -99,7 +99,7 @@ const LinkBox = ({ Icon, href, Text, element  }) => {
           }}
           className="absolute inset-0 grid place-content-center bg-foreground text-background"
         >
-          <Icon className="text-xl sm:text-3xl md:text-4xl" />
+          <Icon className="text-xl md:text-3xl md:text-4xl" />
         </div>
       </a>
     );

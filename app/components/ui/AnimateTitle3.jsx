@@ -43,7 +43,7 @@ const AnimateTitle3 = ({ sno, title, child }) => {
 
   return (
     <div
-      className="flex relative w-full sm:w-[90%]"
+      className="flex relative w-full md:w-[90%]"
       onMouseEnter={handelEnter}
       onMouseLeave={handelExit}
     >

@@ -22,7 +22,7 @@ const Location = () => {
 
   return (
     <div className="w-full h-full grid grid-cols-2 divide-x divide-secondary text-accent p-2 box-border">
-      <div className="flex flex-col items-center justify-center px-5 sm:px-1">
+      <div className="flex flex-col items-center justify-center px-5 md:px-1">
         <img
           src="/images/onPc.gif"
           alt="working"

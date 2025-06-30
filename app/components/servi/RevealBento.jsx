@@ -80,7 +80,7 @@ const RightBlock = () => (
       className="col-span-6 md:col-span-3 bg-accent text-accent-foreground font-semibold hover:bg-foreground hover:text-accent-foreground hover:font-bold transition-all duration-100"
     >
       <div className="text-2xl z-10 opacity-90 flex flex-col md:flex-row gap-1 justify-center items-center text-background">
-        <BiSolidFoodMenu className="hidden sm:visible"/>
+        <BiSolidFoodMenu className="hidden md:visible"/>
         <div>Digital</div>
         <div>Desgin</div>
       </div>
@@ -96,7 +96,7 @@ const RightBlock = () => (
       <div
         className="text-2xl z-10 opacity-90 flex flex-col md:flex-row gap-1 justify-center items-center"
       >
-        <CgWebsite className="hidden sm:visible"/> {" "}
+        <CgWebsite className="hidden md:visible"/> {" "}
         Web Dev
       </div>
     </Block>

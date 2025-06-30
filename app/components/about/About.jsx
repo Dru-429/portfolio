@@ -77,7 +77,7 @@ const About = () => {
           /> */}
         </div>
 
-        <div className="sm:w-[70%] relative">
+        <div className="md:w-[70%] relative">
           {/* Animated Paragraphs with Justified Text */}
           <motion.div className="space-y-6" initial="hidden" animate={isInView ? "visible" : "hidden"}>
             <motion.p

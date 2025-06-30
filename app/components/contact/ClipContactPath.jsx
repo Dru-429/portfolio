@@ -7,7 +7,7 @@ import Location from "./Location"
 
 export const SocialLinks = () => {
   return (
-    <div className="w-full px-4 sm:px-6 lg:px-8">
+    <div className="w-full px-4 md:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <ClipPathLinks />
       </div>
@@ -19,9 +19,9 @@ const ClipPathLinks = () => {
   return (
     <div className="mt-20 space-y-6">
       {/* Contact Form - Full Width on Mobile, Hidden on Desktop in Grid */}
-      <div className="block lg:hidden">
+      {/* <div className="block lg:hidden">
         <ContactForm />
-      </div>
+      </div> */}
 
       {/* Main Grid Container */}
       <div className="backdrop-blur-md bg-primary/20 border border-primary/30 rounded-3xl overflow-hidden shadow-2xl">

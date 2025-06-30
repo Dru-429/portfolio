@@ -10,7 +10,7 @@ const HeroSection = () => {
     <section id="home">
       <div className="w-100% min-h-screen relative">
         <div className="mt-[30vh] mb-28 md:mb-0 mx-2 md:mx-10 md:w-1/2 md:text-left">
-          <div className="sm:flex justify-between items-start leading-none tracking-tighter relative">
+          <div className="md:flex justify-between items-start leading-none tracking-tighter relative">
             <motion.span className="text-lg px-1 relative top-3 text-foreground right-4 border-bottom-[1px] border-foreground">
               Dhruv Sahoo
               <motion.div
@@ -24,7 +24,7 @@ const HeroSection = () => {
             <AnimateTitle first="Web Devel" italic="o" second="per" />
           </div>
 
-          <span className="text-4xl sm:text-6xl font-[600] tracking-tight bg-gradient-to-r from-secondary to-accent text-transparent bg-clip-text pt-8">
+          <span className="text-4xl md:text-6xl font-[600] tracking-tight bg-gradient-to-r from-secondary to-accent text-transparent bg-clip-text pt-8">
             & Automation Builder
           </span>
 
@@ -35,7 +35,7 @@ const HeroSection = () => {
           </p>
         </div>
 
-        <div className="px-2 sm:px-10 border-t-[1px] mt-24 border-foreground flex justify-between items-center relative">
+        <div className="px-2 md:px-10 border-t-[1px] mt-24 border-foreground flex justify-between items-center relative">
           <div className=" py-5 text-md text-foreground/80">
             <h3>Email:</h3>
             <p>contact.dhruvsahoo@gmail.com</p>

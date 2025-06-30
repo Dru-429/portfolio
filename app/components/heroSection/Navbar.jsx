@@ -7,19 +7,19 @@ import { ModeToggle } from "./ModeToggle";
 
 const Navbar = () => {
   return (
-    <div className="sm:w-[82%] flex items-center justify-between py-1 px-1 sm:px-7 py-1md:py-2 box-border backdrop-blur-md bg-accent/10 rounded-3xl p-8 border border-accent/20 shadow-2xl ">
+    <div className="md:w-[82%] flex items-center justify-between py-1 px-1 md:px-7 py-1md:py-2 box-border backdrop-blur-md bg-accent/10 rounded-3xl p-8 border border-accent/20 shadow-2xl ">
       {/*Left Logo and Name Section */}
       <div className="flex items-center justify-between md:w-[60%] w-1/2">
         <div>
-          <span className="text-accent sm:text-3xl text-2xl leading-none italic sm:px-2 px-2 sm:pr-2">
+          <span className="text-accent md:text-3xl text-2xl leading-none italic md:px-2 px-2 md:pr-2">
             dru
           </span>
           <span className="text-xl leading-none tracking-tighter text-foreground">
             Dhruv Sahoo
           </span>
         </div>
-        <div className="sm:w-[45%] w-[25%] flex items-center justify-between tracking-tighter leading-none pr-2 relative">
-          <div className="hidden sm:flex gap-10 text-foreground ">
+        <div className="md:w-[45%] w-[25%] flex items-center justify-between tracking-tighter leading-none pr-2 relative">
+          <div className="hidden md:flex gap-10 text-foreground ">
             {[
               ["Home", "#home"],
               ["About", "#about"],
