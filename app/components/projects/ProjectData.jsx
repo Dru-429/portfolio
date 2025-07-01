@@ -30,7 +30,7 @@ const projectData = [
     liveLink: "https://ochi-design-clone.web.app/",
     gitLink: "https://github.com/Dru-429/ochi-design-clone", // update if repo exists
     about:
-      "A minimalist landing page clone of Ochi Design(An awarded landingpage). Features sleek layout, clean typography, and smooth animations built with React, Tailwind CSS, and Framer Motion.",
+      "A minimalist landing page clone of Ochi Design (an awarded landingpage). Features sleek layout, clean typography, and smooth animations built with React, Tailwind CSS, and Framer Motion.",
     stack: [
       ["React", <IoLogoReact />],
       ["Tailwind CSS", <SiTailwindcss />],

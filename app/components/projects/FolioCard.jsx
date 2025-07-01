@@ -161,48 +161,14 @@ export default function FolioCard({
 
                 <div className="flex gap-4">
                   {gitLink && (
-                    <motion.div
-                      className="group/icon relative cursor-pointer z-40"
-                      whileHover={{ scale: 1.1, rotate: 5 }}
-                      whileTap={{ scale: 0.9 }}
-                      initial={{ opacity: 0, scale: 0 }}
-                      animate={
-                        isInView
-                          ? { opacity: 1, scale: 1 }
-                          : { opacity: 0, scale: 0 }
-                      }
-                      transition={{ delay: index * 0.2 + 0.8 }}
-                    >
-                      <Link
-                        href={gitLink}
-                        target="_blank"
-                        // rel="noopener noreferrer"
-                      >
-                        <div className="p-3 rounded-full backdrop-blur-md bg-secondary/10 hover:bg-secondary border border-secondary/20 hover:border-secondary/30 transition-all duration-300">
-                          <FaGithub className="text-xl text-foreground/80 group-hover/icon:text-accent hover:text-primary transition-colors duration-200" />
-                        </div>
-                      </Link>
-                      <motion.div
-                        className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0 group-hover/icon:opacity-100 transition-opacity duration-300"
-                        animate={{ rotate: 360 }}
-                        transition={{
-                          duration: 8,
-                          repeat: Number.POSITIVE_INFINITY,
-                          ease: "linear",
-                        }}
-                      />
-                    </motion.div>
-                  )}
-
-                  {liveLink && (
                     <Link
-                      href={liveLink}
+                      href={gitLink}
                       target="_blank"
-                      rel="noopener noreferrer z-40"
+                      // rel="noopener noreferrer"
                     >
                       <motion.div
                         className="group/icon relative cursor-pointer z-40"
-                        whileHover={{ scale: 1.1, rotate: -5 }}
+                        whileHover={{ scale: 1.1, rotate: 5 }}
                         whileTap={{ scale: 0.9 }}
                         initial={{ opacity: 0, scale: 0 }}
                         animate={
@@ -210,21 +176,55 @@ export default function FolioCard({
                             ? { opacity: 1, scale: 1 }
                             : { opacity: 0, scale: 0 }
                         }
-                        transition={{ delay: index * 0.2 + 0.9 }}
-                      ></motion.div>
+                        transition={{ delay: index * 0.2 + 0.8 }}
+                      >
+                        <div className="p-3 rounded-full backdrop-blur-md bg-secondary/10 hover:bg-secondary border border-secondary/20 hover:border-secondary/30 transition-all duration-200">
+                          <FaGithub className="text-xl text-foreground/80 group-hover/icon:text-accent hover:text-primary transition-colors duration-200" />
+                        </div>
+                        <motion.div
+                          className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0 group-hover/icon:opacity-100 transition-opacity duration-200"
+                          animate={{ rotate: 360 }}
+                          transition={{
+                            duration: 8,
+                            repeat: Number.POSITIVE_INFINITY,
+                            ease: "linear",
+                          }}
+                        />
+                      </motion.div>
+                    </Link>
+                  )}
 
-                      <div className="p-3 rounded-full backdrop-blur-md bg-secondary/10 hover:backdrop-none hover:bg-secondary border border-secondary/20 hover:border-secondary/30 transition-all duration-300">
-                        <FaExternalLinkAlt className="text-xl text-foreground/80 group-hover/icon:text-accent transition-colors duration-200" />
-                      </div>
+                  {liveLink && (
+                    <Link
+                      href={liveLink}
+                      target="_blank"
+                      // rel="noopener noreferrer"
+                    >
                       <motion.div
-                        className="absolute inset-0 rounded-full bg-gradient-to-r from-accent/20 to-primary/20 opacity-0 group-hover/icon:opacity-100 transition-opacity duration-300"
-                        animate={{ rotate: -360 }}
-                        transition={{
-                          duration: 10,
-                          repeat: Number.POSITIVE_INFINITY,
-                          ease: "linear",
-                        }}
-                      />
+                        className="group/icon relative cursor-pointer z-40"
+                        whileHover={{ scale: 1.1, rotate: 5 }}
+                        whileTap={{ scale: 0.9 }}
+                        initial={{ opacity: 0, scale: 0 }}
+                        animate={
+                          isInView
+                            ? { opacity: 1, scale: 1 }
+                            : { opacity: 0, scale: 0 }
+                        }
+                        transition={{ delay: index * 0.2 + 0.8 }}
+                      >
+                        <div className="p-3 rounded-full backdrop-blur-md bg-secondary/10 hover:bg-secondary border border-secondary/20 hover:border-secondary/30 transition-all duration-200">
+                          <FaExternalLinkAlt className="text-xl text-foreground/80 group-hover/icon:text-accent hover:text-primary transition-colors duration-200" />
+                        </div>
+                        <motion.div
+                          className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0 group-hover/icon:opacity-100 transition-opacity duration-200"
+                          animate={{ rotate: 360 }}
+                          transition={{
+                            duration: 8,
+                            repeat: Number.POSITIVE_INFINITY,
+                            ease: "linear",
+                          }}
+                        />
+                      </motion.div>
                     </Link>
                   )}
                 </div>
