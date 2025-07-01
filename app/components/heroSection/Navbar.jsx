@@ -4,16 +4,19 @@ import { easeIn, motion } from "framer-motion";
 import Link from "next/link";
 import React from "react";
 import { ModeToggle } from "./ModeToggle";
+import Image from "next/image";
 
 const Navbar = () => {
   return (
     <div className="md:w-[82%] w-[95%] flex items-center justify-between py-2 px-1 md:px-7 py-1md:py-2 box-border backdrop-blur-md bg-accent/10 rounded-3xl p-8 border border-accent/20 shadow-2xl ">
       {/*Left Logo and Name Section */}
       <div className="flex items-center justify-between md:w-[60%] w-1/2">
-        <div>
-          <span className="text-accent md:text-3xl text-2xl leading-none italic md:px-2 px-2 md:pr-2">
-            dru
-          </span>
+        <div className="flex items-center gap-2">
+          <Image 
+            src="/dru.svg" 
+            width={40} 
+            height={40} 
+          />
           <span className="text-xl leading-none tracking-tighter text-foreground">
             Dhruv Sahoo
           </span>
