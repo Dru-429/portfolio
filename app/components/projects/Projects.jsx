@@ -23,7 +23,7 @@ const Projects = () => {
   }
 
   return (
-    <section id="projects" className="relative w-[95%]  mx-4 md:mx-10 my-20 border-t-[2px] border-foreground/30 " ref={ref}>
+    <section id="projects" className="relative w-[95%] md:w-full mx-4 md:mx-10 my-20 border-t-[2px] border-foreground/30 " ref={ref}>
       {/* Background Elements */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <motion.div

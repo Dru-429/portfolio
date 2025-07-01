@@ -65,7 +65,7 @@ const About = () => {
 
   return (
     <section id="about" ref={ref}>
-      <div className="w-full min-h-screen px-2 md:px-10 flex md:flex-row flex-col justify-between md:items-start pb-28 md:pb-0 mb-14 border-b-[2px] border-border relative border-b-foreground/50">
+      <div className="w-full min-h-screen px-5 md:px-10 flex md:flex-row flex-col justify-between md:items-start pb-28 md:pb-0 mb-14 border-b-[2px] border-border relative border-b-foreground/50">
         {/* Enhanced Title with Gradient */}
         <div className="relative mb-16 md:mb-0">
           <AnimateTitle2 text="ABOUT" italicIndex={2} delay={0.08} />
