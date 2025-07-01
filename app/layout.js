@@ -1,7 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./components/Theme-provider";
-import ParallaxScroll from "./components/parallaxScroll/ParallaxScroll";
+import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,6 +20,11 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Dhruv Sahoo — Frontend Developer",
+  icons: {
+    icon: '/favicon/favicon.ico',
+    apple: '/favicon/apple-touch-icon.png',
+    shortcut: '/favicon/favicon-32x32.png',
+  },
   description:
     "A Frontend Engineer passionate about crafting next-gen software. I drive growth by crafting user experiences that blend aesthetics with functionality through my design and development skills. I thrive on turning ideas into seamless digital solutions.",
   keywords: [
@@ -84,6 +89,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <Head>
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="/favicon/site.webmanifest" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-chrome-192x192.png" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/favicon/android-chrome-512x512.png" />
+      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden relative`}
       >
