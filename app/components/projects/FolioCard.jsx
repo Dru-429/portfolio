@@ -1,16 +1,24 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import Link from "next/link"
-import { useRef } from "react"
-import { motion, useInView } from "framer-motion"
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa"
-import TechCapsule from "../ui/TechCapsule"
-import AnimateTitle3 from "../ui/AnimateTitle3"
+import Image from "next/image";
+import Link from "next/link";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import TechCapsule from "../ui/TechCapsule";
+import AnimateTitle3 from "../ui/AnimateTitle3";
 
-export default function FolioCard({ index, title, img, gitLink, liveLink, about, stack }) {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-50px" })
+export default function FolioCard({
+  index,
+  title,
+  img,
+  gitLink,
+  liveLink,
+  about,
+  stack,
+}) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   const cardVariants = {
     hidden: {
@@ -34,7 +42,7 @@ export default function FolioCard({ index, title, img, gitLink, liveLink, about,
         delay: index * 0.2,
       },
     },
-  }
+  };
 
   const imageVariants = {
     hidden: {
@@ -52,7 +60,7 @@ export default function FolioCard({ index, title, img, gitLink, liveLink, about,
         ease: "easeOut",
       },
     },
-  }
+  };
 
   const contentVariants = {
     hidden: { opacity: 0, x: -50 },
@@ -65,7 +73,7 @@ export default function FolioCard({ index, title, img, gitLink, liveLink, about,
         ease: "easeOut",
       },
     },
-  }
+  };
 
   return (
     <div ref={ref} className="w-full">
@@ -133,7 +141,7 @@ export default function FolioCard({ index, title, img, gitLink, liveLink, about,
 
             {/* Content Section */}
             <motion.div
-              className="flex-1 relative z-10 md:w-[60%] lg:w-[70%] xl:w-[75%] " 
+              className="flex-1 relative z-10 md:w-[60%] lg:w-[70%] xl:w-[75%] "
               variants={contentVariants}
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
@@ -143,7 +151,9 @@ export default function FolioCard({ index, title, img, gitLink, liveLink, about,
                 <motion.h2
                   className="text-2xl font-bold text-secondary md:hidden "
                   initial={{ opacity: 0, y: 20 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                  animate={
+                    isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+                  }
                   transition={{ delay: index * 0.2 + 0.7 }}
                 >
                   {title}
@@ -152,14 +162,22 @@ export default function FolioCard({ index, title, img, gitLink, liveLink, about,
                 <div className="flex gap-4">
                   {gitLink && (
                     <motion.div
-                      className="group/icon relative"
+                      className="group/icon relative cursor-pointer z-40"
                       whileHover={{ scale: 1.1, rotate: 5 }}
                       whileTap={{ scale: 0.9 }}
                       initial={{ opacity: 0, scale: 0 }}
-                      animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }}
+                      animate={
+                        isInView
+                          ? { opacity: 1, scale: 1 }
+                          : { opacity: 0, scale: 0 }
+                      }
                       transition={{ delay: index * 0.2 + 0.8 }}
                     >
-                      <Link href={gitLink} target="_blank" rel="noopener noreferrer">
+                      <Link
+                        href={gitLink}
+                        target="_blank"
+                        // rel="noopener noreferrer"
+                      >
                         <div className="p-3 rounded-full backdrop-blur-md bg-secondary/10 hover:bg-secondary border border-secondary/20 hover:border-secondary/30 transition-all duration-300">
                           <FaGithub className="text-xl text-foreground/80 group-hover/icon:text-accent hover:text-primary transition-colors duration-200" />
                         </div>
@@ -167,31 +185,47 @@ export default function FolioCard({ index, title, img, gitLink, liveLink, about,
                       <motion.div
                         className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0 group-hover/icon:opacity-100 transition-opacity duration-300"
                         animate={{ rotate: 360 }}
-                        transition={{ duration: 8, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
+                        transition={{
+                          duration: 8,
+                          repeat: Number.POSITIVE_INFINITY,
+                          ease: "linear",
+                        }}
                       />
                     </motion.div>
                   )}
 
                   {liveLink && (
-                    <motion.div
-                      className="group/icon relative"
-                      whileHover={{ scale: 1.1, rotate: -5 }}
-                      whileTap={{ scale: 0.9 }}
-                      initial={{ opacity: 0, scale: 0 }}
-                      animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }}
-                      transition={{ delay: index * 0.2 + 0.9 }}
+                    <Link
+                      href={liveLink}
+                      target="_blank"
+                      rel="noopener noreferrer z-40"
                     >
-                      <Link href={liveLink} target="_blank" rel="noopener noreferrer z-40">
-                        <div className="p-3 rounded-full backdrop-blur-md bg-secondary/10 hover:backdrop-none hover:bg-secondary border border-secondary/20 hover:border-secondary/30 transition-all duration-300">
-                          <FaExternalLinkAlt className="text-xl text-foreground/80 group-hover/icon:text-accent transition-colors duration-200" />
-                        </div>
-                        <motion.div
-                          className="absolute inset-0 rounded-full bg-gradient-to-r from-accent/20 to-primary/20 opacity-0 group-hover/icon:opacity-100 transition-opacity duration-300"
-                          animate={{ rotate: -360 }}
-                          transition={{ duration: 10, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
-                        />
-                      </Link>
-                    </motion.div>
+                      <motion.div
+                        className="group/icon relative cursor-pointer z-40"
+                        whileHover={{ scale: 1.1, rotate: -5 }}
+                        whileTap={{ scale: 0.9 }}
+                        initial={{ opacity: 0, scale: 0 }}
+                        animate={
+                          isInView
+                            ? { opacity: 1, scale: 1 }
+                            : { opacity: 0, scale: 0 }
+                        }
+                        transition={{ delay: index * 0.2 + 0.9 }}
+                      ></motion.div>
+
+                      <div className="p-3 rounded-full backdrop-blur-md bg-secondary/10 hover:backdrop-none hover:bg-secondary border border-secondary/20 hover:border-secondary/30 transition-all duration-300">
+                        <FaExternalLinkAlt className="text-xl text-foreground/80 group-hover/icon:text-accent transition-colors duration-200" />
+                      </div>
+                      <motion.div
+                        className="absolute inset-0 rounded-full bg-gradient-to-r from-accent/20 to-primary/20 opacity-0 group-hover/icon:opacity-100 transition-opacity duration-300"
+                        animate={{ rotate: -360 }}
+                        transition={{
+                          duration: 10,
+                          repeat: Number.POSITIVE_INFINITY,
+                          ease: "linear",
+                        }}
+                      />
+                    </Link>
                   )}
                 </div>
               </div>
@@ -200,7 +234,9 @@ export default function FolioCard({ index, title, img, gitLink, liveLink, about,
               <motion.p
                 className="text-foreground/90 mb-6 leading-relaxed text-lg"
                 initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                animate={
+                  isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+                }
                 transition={{ delay: index * 0.2 + 1.0 }}
               >
                 {about}
@@ -232,7 +268,10 @@ export default function FolioCard({ index, title, img, gitLink, liveLink, about,
               animate={isInView ? "visible" : "hidden"}
             >
               <div className="relative overflow-hidden rounded-2xl backdrop-blur-sm bg-secondary/5 border border-secondary/10 p-2">
-                <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }}>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                >
                   <Image
                     src={img || "/placeholder.svg"}
                     alt={title}
@@ -255,5 +294,5 @@ export default function FolioCard({ index, title, img, gitLink, liveLink, about,
         }
       />
     </div>
-  )
+  );
 }

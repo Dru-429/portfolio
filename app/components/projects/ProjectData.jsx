@@ -1,92 +1,60 @@
 import { IoLogoHtml5, IoLogoCss3, IoLogoReact } from "react-icons/io5";
-import { SiTailwindcss, SiFramer, SiAppwrite, SiGooglegemini, SiNotion, SiHostinger } from "react-icons/si";
-import { FaJs, FaFigma, FaGithub } from "react-icons/fa6";
-
+import {
+  SiTailwindcss,
+  SiFramer,
+  SiAppwrite,
+  SiNextdotjs,
+  SiMongodb,
+} from "react-icons/si";
+import { FaJs } from "react-icons/fa6";
+import { RiFirebaseFill } from "react-icons/ri";
+import { BiLogoTypescript } from "react-icons/bi";
 
 const projectData = [
   {
-    "title": "Offset Africa",
-    "liveLink": "https://offsetcomms.africa/",
-    "about": "Offset Communications Africa’s website really allows them to stand out in the PR sector. It shows their works and case studies — highlighting their expertise and educating users about the company philosophy.",
-    "stack": [
-      [
-        "HTML", <IoLogoHtml5 />
-      ],
-      [
-        "CSS", <IoLogoCss3 />
-      ],
-      [
-        "Tailwind CSS", <SiTailwindcss />
-      ],
-      [
-        "JavaSript", <FaJs />
-      ],
+    title: "Sticky Board",
+    liveLink: "https://stickyboard-dru.vercel.app/",
+    gitLink: "https://github.com/Dru-429/sticky-board",
+    about:
+      "Sticky Board is a modern twist on the classic community notice wall. Drop anonymous notes, share ideas, shout out projects, or just vibe — no logins, no limits. A playful digital corkboard for pure creativity.",
+    stack: [
+      ["Next.js", <SiNextdotjs />],
+      ["Tailwind CSS", <SiTailwindcss />],
+      ["Appwrite", <SiAppwrite />],
+      ["Framer Motion", <SiFramer />],
     ],
-    "img": "/offset-folio.svg"
+    img: "/stickyboard.svg", // Replace with your actual Sticky Board image path
   },
   {
-    "title": "Shortly",
-    "gitLink": "https://github.com/adex-hub/url-shortening-api-landing",
-    "liveLink": "https://lnk-shortener.netlify.app/",
-    "about": "A link shortener for a fictional company that effectively shortens links and stores them. No matter how many links you shorten, you can revisit the site anytime to view and manage your previously shortened links.",
-    "stack": [
-      [
-        "HTML", <IoLogoHtml5 />
-      ],
-      [
-        "CSS", <IoLogoCss3 />
-      ],
-      [
-        "Tailwind CSS", <SiTailwindcss />
-      ],
-      [
-        "JavaSript", <FaJs />
-      ],
+    title: "Ochi Design",
+    liveLink: "https://ochi-design-clone.web.app/",
+    gitLink: "https://github.com/Dru-429/ochi-design-clone", // update if repo exists
+    about:
+      "A minimalist landing page clone of Ochi Design(An awarded landingpage). Features sleek layout, clean typography, and smooth animations built with React, Tailwind CSS, and Framer Motion.",
+    stack: [
+      ["React", <IoLogoReact />],
+      ["Tailwind CSS", <SiTailwindcss />],
+      ["Framer Motion", <SiFramer />],
+      ["Firebase", <RiFirebaseFill />],
+      ["Locomotive Scroll", <SiFramer />], // use a custom icon if you prefer (no direct Locomotive icon)
     ],
-    "img": "/shortly.svg"
+    img: "/ochi-design.svg", // Replace with actual image
   },
   {
-    "title": "Where in the world",
-    "gitLink": "https://github.com/adex-hub/where-in-the-world",
-    "liveLink": "https://where-in-the-world-ade.netlify.app/",
-    "about": "A fun tool for checking information about any country in the world such as the country’s native name, currency, population,  border countries etc. It features dynamic routing for each country and theme switch.",
-    "stack": [
-      [
-        "HTML", <IoLogoHtml5 />
-      ],
-      [
-        "CSS", <IoLogoCss3 />
-      ],
-      [
-        "Tailwind CSS", <SiTailwindcss />
-      ],
-      [
-        "JavaSript", <FaJs />
-      ],
+    title: "Sundown Studio ",
+    liveLink: "https://dru-sundown-studio-clone.web.app/",
+    gitLink: "https://github.com/Dru-429/sundown-studio-clone", // update if repo exists
+    about:
+      "A sleek, modern clone of Sundown Studio’s site with smooth scrolling, responsive design, 2D animations, loading screen, swiping elements, and interactive buttons.",
+    stack: [
+      ["HTML", <IoLogoHtml5 />],
+      ["CSS", <IoLogoCss3 />],
+      ["JavaScript", <FaJs />],
+      ["Locomotive Scroll", <SiFramer />], 
+      ["Firebase", <RiFirebaseFill />],
     ],
-    "img": "/witw.svg"
+    img: "/sundown.svg", // Replace with actual image
   },
-  // {
-  //   "title": "Multi-step form",
-  //   "gitLink": "https://github.com/adex-hub/multi-step-form-main",
-  //   "liveLink": "https://ade-loremgaming.netlify.app/",
-  //   "about": "This site features a clean, user-friendly multi-step form for subscribing to a gaming service. Users input personal info, select a plan (monthly or yearly), choose add-ons (online service, larger storage, customizable profile), and review the summary before confirming.",
-  //   "stack": [
-  //     [
-  //       "HTML", <IoLogoHtml5 />
-  //     ],
-  //     [
-  //       "CSS", <IoLogoCss3 />
-  //     ],
-  //     [
-  //       "Tailwind CSS", <SiTailwindcss />
-  //     ],
-  //     [
-  //       "JavaSript", <FaJs />
-  //     ],
-  //   ],
-  //   "img": "/multistep.svg"
-  // }
-]
+];
 
 export default projectData
