@@ -9,18 +9,18 @@ import useDimension from "./useDimension.jsx";
 
 // Images array
 const images = [
-  "1.jpeg",
-  "2.jpeg",
-  "3.jpeg",
-  "4.jpeg",
-  "5.jpeg",
-  "6.jpeg",
-  "7.jpeg",
-  "8.jpeg",
-  "9.jpeg",
-  "10.jpeg",
-  "11.jpeg",
-  "12.jpeg",
+  "1.png",
+  "2.png",
+  "3.png",
+  "4.png",
+  "5.png",
+  "6.png",
+  "7.png",
+  "8.png",
+  "9.png",
+  "10.png",
+  "11.png",
+  "12.png",
 ];
 
 const ParallaxScroll = () => {
@@ -61,7 +61,7 @@ const ParallaxScroll = () => {
     <div className="my-20 max-w-[99%]">
       <div
         ref={container}
-        className="h-[175vh] bg-zinc-800 flex gap-[2vw] box-border p-4 overflow-hidden relative"
+        className="h-[200vh] bg-zinc-950 flex gap-[2vw] box-border p-4 overflow-hidden relative"
       >
         <Column images={[images[0], images[1], images[2]]} y={y1} top="-45%" />
         <Column images={[images[3], images[4], images[5]]} y={y2} top="-95%" />
@@ -84,7 +84,7 @@ const Column = ({ images, y, top }) => {
     >
       {images.map((src, index) => {
         return (
-          <div key={index} className="w-full h-full relative ">
+          <div key={index} className="w-full h-full relative bg-red-800">
             <Image
               src={`/images/${src}`}
               alt="images"

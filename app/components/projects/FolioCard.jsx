@@ -146,8 +146,8 @@ export default function FolioCard({
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
             >
-              {/* Links Section */}
-              <div className="flex justify-between items-center mb-6 md:justify-end md:items-end">
+              {/* title & Links Section */}
+              <div className="flex justify-between items-center mb-4 md:justify-end md:items-end">
                 <motion.h2
                   className="text-2xl font-bold text-secondary md:hidden "
                   initial={{ opacity: 0, y: 20 }}
@@ -276,7 +276,7 @@ export default function FolioCard({
                     src={img || "/placeholder.svg"}
                     alt={title}
                     width={520}
-                    height={400}
+                    height={420}
                     className="rounded-xl object-cover shadow-lg"
                   />
                 </motion.div>
