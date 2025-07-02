@@ -24,21 +24,21 @@ export default function FolioCard({
     hidden: {
       opacity: 0,
       y: 100,
-      scale: 0.8,
-      rotateX: -15,
+      scale: 0.9,
+      // rotateX: -15,
       filter: "blur(20px)",
     },
     visible: {
       opacity: 1,
       y: 0,
       scale: 1,
-      rotateX: 0,
+      // rotateX: 0,
       filter: "blur(0px)",
       transition: {
         type: "spring",
         stiffness: 100,
         damping: 20,
-        duration: 0.8,
+        duration: 0.5,
         delay: index * 0.2,
       },
     },
@@ -55,7 +55,7 @@ export default function FolioCard({
       scale: 1,
       filter: "blur(0px)",
       transition: {
-        duration: 1,
+        duration: 0.7,
         delay: index * 0.2 + 0.3,
         ease: "easeOut",
       },
@@ -68,7 +68,7 @@ export default function FolioCard({
       opacity: 1,
       x: 0,
       transition: {
-        duration: 0.8,
+        duration: 0.5,
         delay: index * 0.2 + 0.5,
         ease: "easeOut",
       },

@@ -59,7 +59,7 @@ const ParallaxScroll = () => {
     <div className="my-20 max-w-[99%]">
       <div
         ref={container}
-        className="h-[200vh] bg-zinc-950 flex gap-[2vw] box-border p-4 overflow-hidden relative"
+        className="h-[180vh] bg-zinc-950 flex gap-[2vw] box-border p-4 overflow-hidden relative"
       >
         <Column images={[images[0], images[1], images[2]]} y={y1} top="-45%" />
         <Column images={[images[3], images[4], images[5]]} y={y2} top="-95%" />
