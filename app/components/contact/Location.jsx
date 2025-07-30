@@ -23,12 +23,9 @@ const Location = () => {
   return (
     <div className="w-full h-full grid grid-cols-2 divide-x divide-secondary text-accent p-2 box-border">
       <div className="flex flex-col items-center justify-center px-5 md:px-1">
-        <img
+        <Image
           src="/images/onPc.gif"
           alt="working"
-          height="100%"
-          width="100%"
-
         //   fill
         //   style={{ width: "80%", height: "60%" }}
         />
@@ -36,7 +33,7 @@ const Location = () => {
       </div>
 
       <div className="flex flex-col items-center justify-center text-foreground/80" >
-        <img
+        <Image
           src="/images/globe.gif"
           alt="working"
           className="scale-150"
