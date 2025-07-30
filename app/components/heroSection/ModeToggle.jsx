@@ -48,7 +48,7 @@ export function ModeToggle() {
           <div className="relative w-5 h-5 flex items-center justify-center">
             <Sun className={`absolute transition-all duration-700 ease-in-out ${theme === "light" ? "scale-100 rotate-0 opacity-100" : "scale-0 rotate-180 opacity-0"}`} />
             <Moon className={`absolute transition-all duration-700 ease-in-out ${theme === "dark" ? "scale-100 rotate-0 opacity-100" : "scale-0 -rotate-180 opacity-0"}`} />
-            <Monitor className={`absolute transition-all duration-700 ease-in-out ${theme === "system" ? "scale-100 rotate-0 opacity-100" : "scale-0 rotate-90 opacity-0"}`} />
+            <Monitor className={`absolute transition-all duration-700 ease-in-out ${theme === "system" ? "scale-100 rotate-0 opacity-100 " : "scale-0 rotate-90 opacity-0"}`} />
           </div>
 
           <span className="hidden md:inline text-sm font-medium bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent group-hover:from-accent-200 group-hover:to-background-200 transition-all duration-500">

@@ -13,7 +13,7 @@ export default function Cursor() {
     const checkDevice = () => {
       setIsDesktop(window.innerWidth >= 768 && !("ontouchstart" in window))
     }
-
+ 
     checkDevice()
     window.addEventListener("resize", checkDevice)
 

@@ -97,13 +97,13 @@ export default function RootLayout({ children }) {
         <link rel="icon" type="image/png" sizes="512x512" href="/favicon/android-chrome-512x512.png" />
       </Head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden relative`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden relative transition-colors duration-500 zoom-in-90`}
       >
         <ThemeProvider 
           attribute="class"
           defaultTheme="system"
           enableSystem
-          disableTransitionOnChange
+          // disableTransitionOnChange
         >
           {/* <Cursor /> */}
           {children}
