@@ -12,7 +12,7 @@ const AnimateTitle2 = ({ text, italicIndex, delay }) => {
     <>
       <div ref={ref} className="absolute top-[25%] w-10 h-10 "></div>
 
-      <h1 className="h-[4.5rem] overflow-y-hidden overflow-hidden relative ">
+      <h1 className="h-[4.5rem] overflow-y-hidden overflow-hidden relative font-semibold ">
 
         {isInView &&
           `${text}`.split("").map((item, index) => {

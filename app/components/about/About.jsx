@@ -66,19 +66,13 @@ const About = () => {
   return (
     <section id="about" ref={ref}>
       <div className="w-full min-h-screen px-5 md:px-10 flex md:flex-row flex-col justify-between md:items-start pb-28 md:pb-0 mb-14 border-b-[2px] border-border relative border-b-foreground/50">
-        {/* Enhanced Title with Gradient */}
+        
         <div className="relative mb-16 md:mb-0">
           <AnimateTitle2 text="ABOUT" italicIndex={2} delay={0.08} />
-          {/* <motion.div
-            className="absolute -bottom-2 left-0 h-1 bg-gradient-to-r from-primary via-secondary to-accent rounded-full"
-            initial={{ width: 0 }}
-            animate={isInView ? { width: "100%" } : { width: 0 }}
-            transition={{ delay: 0.5, duration: 1, ease: "easeOut" }}
-          /> */}
         </div>
 
         <div className="md:w-[70%] relative">
-          {/* Animated Paragraphs with Justified Text */}
+          {/*Paragraphs*/}
           <motion.div className="space-y-6" initial="hidden" animate={isInView ? "visible" : "hidden"}>
             <motion.p
               custom={0}
@@ -132,33 +126,24 @@ const About = () => {
             </motion.p>
           </motion.div>
 
+          {/* connect Button */}
           <Link href="#contact">
             <motion.div
               variants={buttonVariants}
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
-              className="mt-12"
+              className="mt-16"
             >
               <motion.button
-                className="group relative overflow-hidden text-sm font-semibold px-8 py-2 border-2 border-primary/30 text-secondary-foreground rounded-full bg-gradient-to-r from-secondary to-primary flex gap-3 items-center w-fit shadow-lg hover:shadow-xl transition-all duration-300"
+                className="group relative overflow-hidden text-sm font-semibold px-8 py-2 border-2 border-primary/30 text-secondary-foreground rounded-full bg-gradient-to-r from-accent to-secondary flex gap-3 items-center w-fit shadow-lg hover:shadow-xl transition-all duration-300"
                 whileHover={{
                   scale: 1.05,
-                  boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
                 }}
                 whileTap={{ scale: 0.95 }}
                 onMouseEnter={handleHover}
                 onMouseLeave={handleHoverEnd}
               >
-                {/* Animated background gradient */}
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                  initial={{ x: "-100%" }}
-                  whileHover={{ x: "0%" }}
-                  transition={{ duration: 0.5, ease: "easeInOut" }}
-                />
-
-                {/* Button content */}
-                <span className="relative z-10 text-background font-medium">Let's Connect</span>
+                <span className="relative z-10 text-background font-medium text-lg">Let's Connect</span>
 
                 <motion.div
                   initial={{ x: -10, opacity: 0 }}
@@ -168,13 +153,6 @@ const About = () => {
                   <FaArrowCircleRight className="text-lg" />
                 </motion.div>
 
-                {/* Shine effect */}
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12"
-                  initial={{ x: "-100%" }}
-                  whileHover={{ x: "200%" }}
-                  transition={{ duration: 0.8, ease: "easeInOut" }}
-                />
               </motion.button>
             </motion.div>
           </Link>
@@ -196,19 +174,6 @@ const About = () => {
         </div>
       </div>
 
-      {/* Custom Styles for Better Text Justification */}
-      <style jsx>{`
-        .text-justify {
-          text-align: justify;
-          text-justify: inter-word;
-        }
-        
-        @media (max-width: 768px) {
-          .text-justify {
-            text-align: left;
-          }
-        }
-      `}</style>
     </section>
   )
 }
