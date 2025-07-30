@@ -26,6 +26,9 @@ const Location = () => {
         <img
           src="/images/onPc.gif"
           alt="working"
+          height="100%"
+          width="100%"
+
         //   fill
         //   style={{ width: "80%", height: "60%" }}
         />
@@ -37,6 +40,8 @@ const Location = () => {
           src="/images/globe.gif"
           alt="working"
           className="scale-150"
+          height="100%"
+          width="100%"
         //   fill
         //   style={{ width: "80%", height: "60%" }}
         />

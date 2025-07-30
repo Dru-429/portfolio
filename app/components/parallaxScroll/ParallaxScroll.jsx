@@ -88,6 +88,8 @@ const Column = ({ images, y, top }) => {
               alt="images"
               fill
               className="object-cover"
+              height="100%"
+              width="100%"
             />
           </div>
         );
