@@ -28,6 +28,8 @@ const Location = () => {
           alt="working"
         //   fill
         //   style={{ width: "80%", height: "60%" }}
+          height="500"
+          width="500"
         />
         <p className="pt-4">{currentTime} IST</p>
       </div>
@@ -37,8 +39,8 @@ const Location = () => {
           src="/images/globe.gif"
           alt="working"
           className="scale-150"
-          height="100%"
-          width="100%"
+          height="500"
+          width="500"
         //   fill
         //   style={{ width: "80%", height: "60%" }}
         />
