@@ -135,7 +135,7 @@ const About = () => {
               className="mt-16"
             >
               <motion.button
-                className="group relative overflow-hidden text-sm font-semibold px-8 py-2 border-2 border-primary/30 text-secondary-foreground rounded-full bg-gradient-to-r from-accent to-secondary flex gap-3 items-center w-fit shadow-lg hover:shadow-xl transition-all duration-300"
+                className="group relative overflow-hidden text-sm font-semibold px-8 py-2 border-2 border-primary text-secondary-foreground rounded-full bg-gradient-to-r from-accent to-secondary flex gap-3 items-center w-fit shadow-lg hover:shadow-xl transition-all duration-300"
                 whileHover={{
                   scale: 1.05,
                 }}
@@ -144,11 +144,14 @@ const About = () => {
                 onMouseLeave={handleHoverEnd}
               >
                 <span className="relative z-10 text-background font-medium text-lg">Let's Connect</span>
+                <span className="md:hidden relative z-10 text-background font-medium text-lg">
+                  <FaArrowCircleRight className="text-lg" />
+                </span>
 
                 <motion.div
                   initial={{ x: -10, opacity: 0 }}
                   animate={controls}
-                  className="relative z-10 text-background"
+                  className="hidden md:inline relative z-10 text-background"
                 >
                   <FaArrowCircleRight className="text-lg" />
                 </motion.div>
