@@ -24,7 +24,7 @@ import { BiLogoTypescript } from "react-icons/bi";
 
 const TechStack = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: true, });
 
   const techStackData = [
     {
@@ -65,7 +65,7 @@ const TechStack = () => {
       color: "from-gray-600 to-gray-800",
     },
     {
-      name: "Framer Motion",
+      name: "Motion",
       icon: <SiFramer />,
       color: "from-pink-500 to-purple-600",
     },
@@ -109,36 +109,20 @@ const TechStack = () => {
     },
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.3,
-      },
-    },
-  };
-
   const itemVariants = {
     hidden: {
       opacity: 0,
-      y: 60,
-      scale: 0.8,
-      rotateX: -15,
+      y: 30,
       filter: "blur(10px)",
     },
     visible: {
       opacity: 1,
       y: 0,
-      scale: 1,
-      rotateX: 0,
       filter: "blur(0px)",
       transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 12,
-        duration: 0.8,
+        delay: 0.5,
+        duration: 1,
+        ease: [0.25, 0.46, 0.45, 0.94],
       },
     },
   };
@@ -146,40 +130,25 @@ const TechStack = () => {
   return (
     <section id="techstack" ref={ref}>
       <div className="w-full min-h-screen py-20 md:pb-10 md:px-10 md:mt-10 px-2 flex flex-col md:flex-row justify-between items-start relative overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-secondary/10 rounded-full blur-2xl animate-pulse animation-delay-2000" />
-        </div>
-
         {/* Title Section */}
         <div className="relative mb-8 md:mb-0">
           <AnimateTitle2 text="Tech Stack" delay={0.05} />
-          {/* <motion.div
-            className="absolute -bottom-2 left-0 h-1 bg-gradient-to-r from-primary via-secondary to-accent rounded-full"
-            initial={{ width: 0 }}
-            animate={isInView ? { width: "100%" } : { width: 0 }}
-            transition={{ delay: 0.8, duration: 1.2, ease: "easeOut" }}
-          /> */}
         </div>
 
         {/* Tech Stack Grid */}
         <div className=" w-[100%] md:w-[70%] flex justify-center items-center">
-          <motion.div
-            className="flex gap-4 flex-wrap w-[90%] md:w-[100%] justify-center items-center md:justify-start"
-            variants={containerVariants}
-            initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
-          >
+          <motion.div className="flex gap-4 flex-wrap w-[90%] md:w-[100%] justify-center items-center md:justify-start">
             {/* Desktop Layout */}
-            <div className="hidden md:flex gap-4 flex-wrap">
+            <div className=" md:flex gap-4 flex-wrap">
               {techStackData.map((tech, index) => (
                 <motion.div
                   key={index}
                   variants={itemVariants}
+                  initial="hidden"
+                  animate= {isInView ? "visible":"hidden"}
                   className="group relative overflow-hidden backdrop-blur-md bg-secondary/20 hover:bg-secondary/30 border border-secondary/30 hover:border-secondary/40 rounded-2xl px-6 py-3 cursor-grab active:cursor-grabbing transition-all duration-300 min-w-[180px] md:mb-2"
                   drag
-                  dragConstraints={{ top: 0, bottom: 0, left: 0, right: 0 }}
+                  dragConstraints={{ top: 2, bottom: 2, left: 2, right: 2 }}
                   dragElastic={0.1}
                   dragTransition={{
                     bounceStiffness: 400,
@@ -187,47 +156,25 @@ const TechStack = () => {
                   }}
                   whileHover={{
                     scale: 1.05,
-                    boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
-                    backdropFilter: "blur(20px)",
                   }}
                   whileTap={{ scale: 0.95 }}
                   whileDrag={{ scale: 1.1, zIndex: 10 }}
                 >
                   {/* Gradient Background */}
                   <div
-                    className={`absolute inset-0 bg-gradient-to-r ${tech.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-2xl`}
-                  />
-
-                  {/* Shine Effect */}
-                  <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-transparent via-secondary/20 to-transparent -skew-x-12"
-                    initial={{ x: "-100%" }}
-                    whileHover={{ x: "200%" }}
-                    transition={{ duration: 0.8, ease: "easeInOut" }}
+                    className={`absolute inset-0 bg-gradient-to-r ${tech.color} opacity-0 group-hover:opacity-40 transition-opacity duration-500 rounded-2xl`}
                   />
 
                   <div className="relative z-10 flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <motion.div
-                        className="text-xl text-foreground/80 group-hover:text-foreground transition-colors duration-300"
-                        whileHover={{ rotate: 360 }}
-                        transition={{ duration: 0.5 }}
-                      >
+                      <motion.div className="text-xl text-foreground/80 group-hover:text-foreground transition-colors duration-300">
                         {tech.icon}
                       </motion.div>
                       <span className="text-sm font-medium text-foreground/90 group-hover:text-foreground transition-colors duration-300">
                         {tech.name}
                       </span>
                     </div>
-                    <motion.div
-                      className="w-3 h-3 rounded-full bg-gradient-to-r from-primary to-secondary"
-                      animate={{ scale: [1, 1.2, 1] }}
-                      transition={{
-                        duration: 2,
-                        repeat: Number.POSITIVE_INFINITY,
-                        ease: "easeInOut",
-                      }}
-                    />
+                    <motion.div className="w-3 h-3 rounded-full bg-gradient-to-r from-accent to-secondary" />
                   </div>
                 </motion.div>
               ))}
@@ -241,26 +188,21 @@ const TechStack = () => {
                 transition={{ delay: 1.5, duration: 0.8 }}
               >
                 <div className="text-center">
-                  <motion.div
-                    className="text-2xl font-bold text-accent mb-1"
-                    animate={{ scale: [1, 1.1, 1] }}
-                    transition={{
-                      duration: 2,
-                      repeat: Number.POSITIVE_INFINITY,
-                      ease: "easeInOut",
-                    }}
-                  >
-                    {techStackData.length}+
+                  <motion.div className="text-2xl font-bold text-accent mb-1">
+                    {techStackData.length + 5 + " "} +
                   </motion.div>
                   <div className="text-sm text-foreground/70">
-                    Tech I Use to Build Magic--Next Yours
+                    Tech I Use to Build Magic-
+                    <span className="text-sm font-semibold text-secondary">
+                      Next Yours
+                    </span>
                   </div>
                 </div>
               </motion.div>
             </div>
 
             {/* Mobile Compact Layout */}
-            <div className="md:hidden w-full">
+            {/* <div className="md:hidden w-full">
               <motion.div
                 className="grid grid-cols-2 gap-3"
                 variants={containerVariants}
@@ -275,7 +217,6 @@ const TechStack = () => {
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
-                    {/* Gradient Background */}
                     <div
                       className={`absolute inset-0 bg-gradient-to-r ${tech.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-xl`}
                     />
@@ -306,7 +247,6 @@ const TechStack = () => {
                 ))}
               </motion.div>
 
-              {/* Mobile Summary Stats */}
               <motion.div
                 className="mt-8 backdrop-blur-md bg-secondary/20 border border-secondary/30 rounded-2xl p-4"
                 initial={{ opacity: 0, y: 30 }}
@@ -332,17 +272,10 @@ const TechStack = () => {
                   </div>
                 </div>
               </motion.div>
-            </div>
+            </div> */}
           </motion.div>
         </div>
       </div>
-
-      {/* Custom Styles */}
-      <style jsx>{`
-        .animation-delay-2000 {
-          animation-delay: 2s;
-        }
-      `}</style>
     </section>
   );
 };
