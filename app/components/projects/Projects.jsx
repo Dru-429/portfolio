@@ -1,58 +1,39 @@
-"use client"
+"use client";
 
-import { useRef } from "react"
-import { motion, useInView } from "framer-motion"
-import projectData from "./ProjectData.jsx"
-import AnimateTitle2 from "../ui/AnimateTitle2"
-import FolioCard from "./FolioCard"
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import projectData from "./ProjectData.jsx";
+import AnimateTitle2 from "../ui/AnimateTitle2";
+import FolioCard from "./FolioCard";
 
 const Projects = () => {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
-  const projectsData = projectData
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const projectsData = projectData;
 
   const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.3,
-        delayChildren: 0.2,
-      },
+    hidden: {
+      opacity: 0,
+      y: 30,
+      filter: "blur(10px)",
     },
-  }
-
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      filter: "blur(0px)",
+      transition: {
+        delay: i * 0.2,
+        duration: 0.8,
+        ease: [0.25, 0.46, 0.45, 0.94],
+      },
+    }),
+  };
   return (
-    <section id="projects" className="relative w-[90%] md:w-full px-4 md:mx-10 my-20 border-t-[2px] border-foreground/30 " ref={ref}>
-      {/* Background Elements */}
-      <div className="absolute inset-0 -z-10 overflow-hidden">
-        <motion.div
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl"
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
-          }}
-        />
-        <motion.div
-          className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-secondary/5 rounded-full blur-2xl"
-          animate={{
-            scale: [1.2, 1, 1.2],
-            opacity: [0.2, 0.4, 0.2],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
-            delay: 2,
-          }}
-        />
-      </div>
-
+    <section
+      id="projects"
+      className="relative w-[90%] md:w-full px-4 md:mx-10 my-20 border-t-[2px] border-foreground/30 "
+      ref={ref}
+    >
       {/* Title Section */}
       <motion.div
         className="my-20 relative"
@@ -91,37 +72,8 @@ const Projects = () => {
           />
         ))}
       </motion.div>
-
-      {/* Bottom Decoration */}
-      {/* <motion.div
-        className="flex justify-center mt-16"
-        initial={{ opacity: 0, scale: 0 }}
-        animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }}
-        transition={{ delay: 2, duration: 0.8 }}
-      >
-        <div className="flex gap-2">
-        
-          {[...Array(3)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="w-2 h-2 rounded-full bg-gradient-to-r from-primary to-secondary"
-              animate={{
-                scale: [1, 1.5, 1],
-                opacity: [0.5, 1, 0.5],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Number.POSITIVE_INFINITY,
-                delay: i * 0.2,
-              }}
-            >
-            
-            </ motion.div>
-          ))}
-        </div>
-      </motion.div> */}
     </section>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;
