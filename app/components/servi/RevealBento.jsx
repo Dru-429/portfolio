@@ -63,7 +63,7 @@ const HeaderBlock = () => (
     </div>
     <h1 className=" md:text-2xl text-xl font-bold leading-tight text-background">
       Things I can help you with:{" "}
-      <span className="text-accent-foreground text-xs md:text-lg md:block relative hidden m md:-bottom-20">
+      <span className="text-accent-foreground md:text-lg md:block relative hidden m md:-bottom-20">
         Think. Design. Built. Launch. Automate.
       </span>
     </h1>
@@ -173,7 +173,7 @@ const WebBotBlock = () => {
 
 const BottomBlock = () => (
   <Block className="md:hidden visible col-span-12 flex items-center bg-foreground text-2xl text-background font-semibold">
-    <p className=" text-xl tracking-tighter font-semibold flex items-center justify-center w-full gap-2">
+    <p className=" text-lg text-center tracking-tighter font-semibold flex items-center justify-center w-full gap-2">
       Think. Design. Built. Launch. Automate.
     </p>
   </Block>
