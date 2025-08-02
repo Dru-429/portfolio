@@ -63,21 +63,21 @@ const ParallaxScroll = () => {
       >
         <Column images={[images[0], images[1], images[2]]} y={y1} top="-45%" />
         <Column images={[images[3], images[4], images[5]]} y={y2} top="-95%" />
-        <Column images={[images[6], images[7], images[8]]} y={y3} top="-45%" />
         <Column
           images={[images[9], images[10], images[11]]}
-          y={y4}
-          top={"-95%"}
+          y={y3}
+          top={"-40%"}
         />
+        <Column images={[images[6], images[7], images[8]]} y={y4} top="-95%" className="hidden md:visible"/>
       </div>
     </div>
   );
 };
 
-const Column = ({ images, y, top }) => {
+const Column = ({ images, y, top, className }) => {
   return (
     <motion.div
-      className={`w-1/4 h-full flex flex-col gap-2 relative`}
+      className={`w-1/3 md:w-1/4 h-full flex flex-col gap-2 relative ${className}`}
       style={{ y, top }}
     >
       {images.map((src, index) => {
@@ -87,7 +87,7 @@ const Column = ({ images, y, top }) => {
               src={`/images/${src}`}
               alt="images"
               fill
-              className="object-cover"
+              className="object-fill md:object-cover"
             />
           </div>
         );
