@@ -54,7 +54,7 @@ const ParallaxScroll = () => {
           <>
             <Column images={[images[0], images[1], images[2]]} y={y1} top="-40%" />
             <Column images={[images[3], images[4], images[5]]} y={y2} top="-85%" />
-            <Column images={[images[6], images[7], images[8]]} y={y3} top="-40%" />
+            <Column images={[images[9], images[10], images[11]]} y={y3} top="-40%" />
           </>
         ) : (
           <>
