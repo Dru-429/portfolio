@@ -109,23 +109,23 @@ const TechStack = () => {
     },
   ];
 
-  const itemVariants = {
-    hidden: {
-      opacity: 0,
-      y: 30,
-      filter: "blur(10px)",
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      filter: "blur(0px)",
-      transition: {
-        delay: 0.5,
-        duration: 1,
-        ease: [0.25, 0.46, 0.45, 0.94],
-      },
-    },
-  };
+  // const itemVariants = {
+  //   hidden: {
+  //     opacity: 0,
+  //     y: 30,
+  //     filter: "blur(10px)",
+  //   },
+  //   visible: {
+  //     opacity: 1,
+  //     y: 0,
+  //     filter: "blur(0px)",
+  //     transition: {
+  //       delay: 0.5,
+  //       duration: 1,
+  //       ease: [0.25, 0.46, 0.45, 0.94],
+  //     },
+  //   },
+  // };
 
   return (
     <section id="techstack" ref={ref}>
@@ -145,9 +145,9 @@ const TechStack = () => {
                 {techStackData.map((tech, index) => (
                   <motion.div
                     key={index}
-                    variants={itemVariants}
-                    initial="hidden"
-                    animate= {isInView ? "visible":"hidden"}
+                    // variants={itemVariants}
+                    // initial="hidden"
+                    // animate= {isInView ? "visible":"hidden"}
                     className="group relative overflow-hidden backdrop-blur-md bg-secondary/20 hover:bg-secondary/30 border border-secondary/30 hover:border-secondary/40 rounded-2xl px-6 py-3 cursor-grab active:cursor-grabbing transition-all duration-300 min-w-[180px] md:mb-2"
                     drag
                     dragConstraints={{ top: 2, bottom: 2, left: 2, right: 2 }}
@@ -183,7 +183,7 @@ const TechStack = () => {
               </div>
 
               <motion.div
-                className="mt-4 backdrop-blur-md bg-secondary/20 border border-secondary/30 rounded-2xl p-4 w-full"
+                className="mt-4 md:-mt-4 backdrop-blur-md bg-secondary/20 border border-secondary/30 rounded-2xl p-4 w-full"
                 initial={{ opacity: 0, y: 30 }}
                 animate={
                   isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }

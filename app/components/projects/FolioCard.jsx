@@ -80,7 +80,7 @@ export default function FolioCard({
                   animate={
                     isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
                   }
-                  transition={{ delay: index * 0.2 + 0.7 }}
+                  transition={{ ease:easeIn, duration:0.5}}
                 >
                   {title}
                 </motion.h2>

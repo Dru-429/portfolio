@@ -47,10 +47,10 @@ const Process = () => {
   }
 
   const stepVariants = {
-    hidden: { opacity: 0, y: 40, filter: "blur(8px)" },
+    hidden: { opacity: 0, x: 40, filter: "blur(8px)" },
     visible: {
       opacity: 1,
-      y: 0,
+      x: 0,
       filter: "blur(0px)",
     },
   }
@@ -99,11 +99,8 @@ const Process = () => {
             </motion.div>
 
             {/* Right Side - Process Steps */}
-            <motion.div
+            <div
               className="grid grid-cols-1 md:grid-cols-2 gap-6"
-              variants={containerVariants}
-              initial="hidden"
-              animate={isInView ? "visible" : "hidden"}
             >
               {processSteps.map((step, i) => (
                 <motion.div
@@ -130,7 +127,7 @@ const Process = () => {
                   </div>
                 </motion.div>
               ))}
-            </motion.div>
+            </div>
           </div>
         </motion.div>
       </div>
