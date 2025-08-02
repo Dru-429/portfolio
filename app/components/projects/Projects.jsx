@@ -11,27 +11,10 @@ const Projects = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const projectsData = projectData;
 
-  const containerVariants = {
-    hidden: {
-      opacity: 0,
-      y: 30,
-      filter: "blur(10px)",
-    },
-    visible: (i) => ({
-      opacity: 1,
-      y: 0,
-      filter: "blur(0px)",
-      transition: {
-        delay: i * 0.2,
-        duration: 0.8,
-        ease: [0.25, 0.46, 0.45, 0.94],
-      },
-    }),
-  };
   return (
     <section
       id="projects"
-      className="relative w-[90%] md:w-full px-4 md:mx-10 my-20 border-t-[2px] border-foreground/30 "
+      className="relative md:w-full px-4 md:mx-10 my-20 border-t-[2px] border-foreground/30 "
       ref={ref}
     >
       {/* Title Section */}
@@ -55,9 +38,6 @@ const Projects = () => {
       {/* Projects Grid */}
       <motion.div
         className="flex flex-col items-center justify-center w-full gap-10"
-        variants={containerVariants}
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
       >
         {projectsData.map((work, index) => (
           <FolioCard

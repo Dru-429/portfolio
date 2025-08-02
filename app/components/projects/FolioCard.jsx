@@ -44,37 +44,6 @@ export default function FolioCard({
     },
   };
 
-  const imageVariants = {
-    hidden: {
-      opacity: 0,
-      scale: 1.2,
-      filter: "blur(10px)",
-    },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      filter: "blur(0px)",
-      transition: {
-        duration: 0.7,
-        delay: index * 0.2 + 0.3,
-        ease: "easeOut",
-      },
-    },
-  };
-
-  const contentVariants = {
-    hidden: { opacity: 0, x: -50 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.5,
-        delay: index * 0.2 + 0.5,
-        ease: "easeOut",
-      },
-    },
-  };
-
   return (
     <div ref={ref} className="w-full">
       <AnimateTitle3
@@ -86,65 +55,24 @@ export default function FolioCard({
             variants={cardVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="group relative overflow-hidden backdrop-blur-xl bg-secondary/10 hover:bg-secondary/15 border border-secondary/20 hover:border-secondary/30 rounded-t-3xl shadow-xl hover:shadow-2xl flex flex-col-reverse justify-between items-center gap-10 md:flex-row p-8 mb-8 transition-all duration-500"
+            className="group relative overflow-hidden backdrop-blur-xl bg-secondary/10 hover:bg-secondary/15 border border-secondary/20 hover:border-secondary/30 rounded-3xl md:rounded-b-none shadow-xl hover:shadow-2xl flex flex-col-reverse justify-between items-center gap-10 md:flex-row p-8 mb-8 transition-all duration-500"
             whileHover={{
               scale: 1.02,
               y: 10,
-              boxShadow: "0 25px 50px rgba(0,0,0,0.15)",
             }}
             transition={{ duration: 0.3 }}
           >
             {/* Animated Background Gradient */}
             <motion.div
-              className="absolute inset-0 bg-gradient-to-br from-primary/10 via-secondary/5 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-3xl"
+              className="absolute inset-0 bg-gradient-to-br from-primary/10 via-secondary/5 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-3xl z-[9]"
               initial={{ scale: 0.8, rotate: -5 }}
               whileHover={{ scale: 1, rotate: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.3 }}
             />
-
-            {/* Shine Effect */}
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 opacity-0 group-hover:opacity-100"
-              initial={{ x: "-100%" }}
-              whileHover={{ x: "200%" }}
-              transition={{ duration: 1.2, ease: "easeInOut" }}
-            />
-
-            {/* Floating Particles */}
-            <div className="absolute inset-0 overflow-hidden rounded-3xl">
-              <motion.div
-                className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary/30 rounded-full"
-                animate={{
-                  y: [0, -20, 0],
-                  opacity: [0.3, 0.8, 0.3],
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Number.POSITIVE_INFINITY,
-                  ease: "easeInOut",
-                }}
-              />
-              <motion.div
-                className="absolute bottom-1/3 right-1/3 w-1 h-1 bg-secondary/40 rounded-full"
-                animate={{
-                  y: [0, -15, 0],
-                  opacity: [0.2, 0.6, 0.2],
-                }}
-                transition={{
-                  duration: 4,
-                  repeat: Number.POSITIVE_INFINITY,
-                  ease: "easeInOut",
-                  delay: 1,
-                }}
-              />
-            </div>
 
             {/* Content Section */}
             <motion.div
               className="flex-1 relative z-10 md:w-[60%] lg:w-[70%] xl:w-[75%] "
-              variants={contentVariants}
-              initial="hidden"
-              animate={isInView ? "visible" : "hidden"}
             >
               {/* title & Links Section */}
               <div className="flex justify-between items-center mb-4 md:justify-end md:items-end">
@@ -165,9 +93,10 @@ export default function FolioCard({
                       href={gitLink}
                       target="_blank"
                       // rel="noopener noreferrer"
+                      className="relative z-40 "
                     >
                       <motion.div
-                        className="group/icon relative cursor-pointer z-40"
+                        className="group/icon relative cursor-pointer"
                         whileHover={{ scale: 1.1, rotate: 5 }}
                         whileTap={{ scale: 0.9 }}
                         initial={{ opacity: 0, scale: 0 }}
@@ -199,9 +128,10 @@ export default function FolioCard({
                       href={liveLink}
                       target="_blank"
                       // rel="noopener noreferrer"
+                      className="relative z-40 cursor-pointer"
                     >
                       <motion.div
-                        className="group/icon relative cursor-pointer z-40"
+                        className="group/icon relative cursor-pointer"
                         whileHover={{ scale: 1.1, rotate: 5 }}
                         whileTap={{ scale: 0.9 }}
                         initial={{ opacity: 0, scale: 0 }}
@@ -261,11 +191,8 @@ export default function FolioCard({
             </motion.div>
 
             {/* Image Section */}
-            <motion.div
-              className="relative flex-shrink-0 md:w-[40%]"
-              variants={imageVariants}
-              initial="hidden"
-              animate={isInView ? "visible" : "hidden"}
+            <div
+              className="relative flex-shrink-0 md:w-[40%] z-40"
             >
               <div className="relative overflow-hidden rounded-2xl backdrop-blur-sm bg-secondary/5 border border-secondary/10 p-2">
                 <motion.div
@@ -289,7 +216,7 @@ export default function FolioCard({
                   transition={{ duration: 0.5 }}
                 />
               </div>
-            </motion.div>
+            </div>
           </motion.div>
         }
       />
