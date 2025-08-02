@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { easeIn, motion, useInView } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import TechCapsule from "../ui/TechCapsule";
 import AnimateTitle3 from "../ui/AnimateTitle3";
@@ -20,26 +20,27 @@ export default function FolioCard({
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
-  const cardVariants = {
-    hidden: {
-      opacity: 0,
-      y: 100,
-      scale: 0.9,
-      // rotateX: -15,
-      filter: "blur(20px)",
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      // rotateX: 0,
-      filter: "blur(0px)",
-      transition: {
-        duration: 0.5,
-        delay: index * 0.1,
-      },
-    },
-  };
+  // const cardVariants = {
+  //   hidden: {
+  //     opacity: 0,
+  //     y: 100,
+  //     scale: 0.9,
+  //     // rotateX: -15,
+  //     filter: "blur(20px)",
+  //   },
+  //   visible: {
+  //     opacity: 1,
+  //     y: 0,
+  //     scale: 1,
+  //     // rotateX: 0,
+  //     filter: "blur(0px)",
+  //     transition: {
+  //       duration: 0.5,
+  //       delay: index * 0.1,
+  //       ease:easeIn
+  //     },
+  //   },
+  // };
 
   return (
     <div ref={ref} className="w-full">
@@ -49,9 +50,9 @@ export default function FolioCard({
         sno={index}
         child={
           <motion.div
-            variants={cardVariants}
-            initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
+            // variants={cardVariants}
+            // initial="hidden"
+            // animate={isInView ? "visible" : "hidden"}
             className="group relative overflow-hidden backdrop-blur-xl bg-secondary/10 hover:bg-secondary/15 border border-secondary/20 hover:border-secondary/30 rounded-3xl md:rounded-b-none shadow-xl hover:shadow-2xl flex flex-col-reverse justify-between items-center gap-10 md:flex-row p-8 mb-8 transition-all duration-500"
             whileHover={{
               scale: 1.02,
