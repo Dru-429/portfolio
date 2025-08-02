@@ -35,11 +35,8 @@ export default function FolioCard({
       // rotateX: 0,
       filter: "blur(0px)",
       transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 20,
         duration: 0.5,
-        delay: index * 0.2,
+        delay: index * 0.1,
       },
     },
   };

@@ -62,7 +62,7 @@ const HeaderBlock = () => (
       <Eyes />
     </div>
     <h1 className=" md:text-2xl text-xl font-bold leading-tight text-background">
-      Things i can help you with:{" "}
+      Things I can help you with:{" "}
       <span className="text-accent-foreground text-xs md:text-lg md:block relative hidden m md:-bottom-20">
         Think. Design. Built. Launch. Automate.
       </span>
